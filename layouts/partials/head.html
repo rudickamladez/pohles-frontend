@@ -1,0 +1,40 @@
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>
+        {{- if .IsHome }}
+        {{ .Site.Title }}
+        {{- else }}
+        {{ .Title }} &middot; {{ .Site.Title }}
+        {{- end }}
+    </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    {{- if .IsHome }}
+    <meta name="description" content="{{ i18n " homeDescription" }}">
+    {{- else if .Description }}
+    <meta name="description" content="{{ .Description }}">
+    {{- end }}
+
+    <!-- Favicons -->
+    <link href="/img/favicon.png" rel="icon">
+    <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    {{ $style := resources.Get "css/style.css" }}
+    {{ $style = $style | minify }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+</head>

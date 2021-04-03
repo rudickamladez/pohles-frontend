@@ -1,0 +1,36 @@
+[homeTitle]
+other = "Fairytale forest in Rudice"
+
+[homeDescription]
+other = "Jump with us from fairy tale to fairy tale"
+
+[aboutEvent]
+other = "About event"
+
+[where]
+other = "Where"
+
+[when]
+other = "When"
+
+[home]
+other = "Home"
+
+[about]
+other = "About"
+
+[contact]
+other = "Contact"
+
+[tickets]
+other = "Tickets"
+
+[wordCount]
+other = "This article has {{ .WordCount }} words."
+
+[readingTime]
+one = "One minute to read"
+other = "{{.Count}} minutes to read"
+
+[readArticle]
+other = "Read article"

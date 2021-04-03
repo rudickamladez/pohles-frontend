@@ -1,0 +1,26 @@
+baseURL = "/"
+defaultContentLanguage = "cs"
+defaultContentLanguageInSubdir = true
+title = "Pohádkový les Rudice"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+[languages]
+  [languages.cs]
+    weight = 1
+    languageName = "Čeština"
+    languageCode = "cs"
+  [languages.en]
+    weight = 2
+    languageName = "English"
+    languageCode = "en"
+[params]
+    images = ["/images/hero-bg.jpg"]
+    [taxonomies]
+        series = "series"
+    [[params.links]]
+        icon = "github"
+        title = "GitHub"
+        url = "https://github.com/HodyRC/pohles-frontend"
+    [[params.links]]
+        icon = "envelope"
+        title = "E-mail"
+        url = "mailto:pohles@rudickamladez.cz"

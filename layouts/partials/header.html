@@ -1,0 +1,20 @@
+<header id="header" class="d-flex align-items-center header-inner">
+    <div class="container-fluid container-xxl d-flex align-items-center">
+
+        <div id="logo" class="me-auto">
+            <h1><a href="/">Poh<span>Les</span></a></h1>
+        </div>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li><a class="nav-link scrollto" href="/{{ .Lang }}/">{{ i18n "home" }}</a></li>
+                <li><a class="nav-link scrollto" href="/{{ .Lang }}/about">{{ i18n "about" }}</a></li>
+                <li><a class="nav-link scrollto" href="/{{ .Lang }}/contact">{{ i18n "contact" }}</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+
+        <a class="buy-tickets" href="/{{ .Lang }}/tickets">{{ i18n "tickets" }}</a>
+
+    </div>
+</header>

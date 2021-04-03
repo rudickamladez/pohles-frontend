@@ -1,0 +1,33 @@
+[homeTitle]
+other = "Pohádkový les Rudice"
+
+[homeDescription]
+other = "Skočte si s námi z pohádky do pohádky"
+
+[aboutEvent]
+other = "O události"
+
+[where]
+other = "Kde"
+
+[when]
+other = "Kdy"
+
+[home]
+other = "Domů"
+
+[about]
+other = "O události"
+
+[contact]
+other = "Kontakt"
+
+[tickets]
+other = "Vstupenky"
+
+[readingTime]
+one = "Minuta čtení"
+other = "{{.Count}} minut čtení"
+
+[readArticle]
+other = "Číst článek"
