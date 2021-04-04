@@ -49,6 +49,12 @@ other = "Odeslat zprávu"
 [thankyou]
 other = "Děkujeme!"
 
+[eventSchedule]
+other = "Program"
+
+[eventScheduleDescription]
+other = "Jasně a přehledně"
+
 [readingTime]
 one = "Minuta čtení"
 other = "{{.Count}} minut čtení"

@@ -6,4 +6,46 @@
     <a href="/{{ .Lang }}/tickets" class="about-btn scrollto">{{ i18n "tickets" }}</a>
   </div>
 </section>
+<!-- ======= About Section ======= -->
+<section id="about">
+  <div class="container" data-aos="fade-up">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>{{ i18n "aboutEvent"}}</h2>
+        <p>Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut
+          accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in
+          est ut optio sequi unde.</p>
+      </div>
+      <div class="col-lg-3">
+        <h3>{{ i18n "where" }}</h3>
+        <p>Downtown Conference Center, New York</p>
+      </div>
+      <div class="col-lg-3">
+        <h3>{{ i18n "when" }}</h3>
+        <p>Monday to Wednesday<br>10-12 December</p>
+      </div>
+    </div>
+  </div>
+</section><!-- End About Section -->
+<!-- ======= Schedule Section ======= -->
+<section id="schedule" class="section-with-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>{{ i18n "eventSchedule" }}</h2>
+      <p>{{ i18n "eventScheduleDescription" }}</p>
+    </div>
+
+    <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+      <div role="tabpanel" class="col-lg-9 tab-pane fade show active">
+        <div class="row schedule-item">
+          <div class="col-md-2"><time>09:30 AM</time></div>
+          <div class="col-md-10">
+            <h4>Registration</h4>
+            <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- End Schedule Section -->
 {{ end }}

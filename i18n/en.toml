@@ -52,6 +52,12 @@ other = "Send Message"
 [thankyou]
 other = "Thank you!"
 
+[eventSchedule]
+other = "Event Schedule"
+
+[eventScheduleDescription]
+other = "There is our event schedule"
+
 [readingTime]
 one = "One minute to read"
 other = "{{.Count}} minutes to read"

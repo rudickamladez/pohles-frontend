@@ -1,0 +1,98 @@
+{{ define "main" }}
+<main id="main" class="main-page">
+  <!-- ======= Venue Section ======= -->
+  <section id="venue">
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="section-header">
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Description }}</p>
+      </div>
+      <div class="container">
+        {{ .Content }}
+      </div>
+      <div class="row g-0">
+        <div class="col-lg-6 venue-map">
+          {{/* <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+            frameborder="0" style="border:0" allowfullscreen></iframe> */}}
+          <iframe width="600" height="450" frameborder="0" style="border:0" loading="lazy" allowfullscreen
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNfqDxh-NEkcRv0x39JPIVEY&key=AIzaSyBE0wH1ymmh3XqFoypk0rf3jLSMNTo_uhc"></iframe>
+        </div>
+
+        <div class="col-lg-6 venue-info">
+          <div class="row justify-content-center">
+            <div class="col-11 col-lg-8 position-relative">
+              <h3>Downtown Conference Center, New York</h3>
+              <p>Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit
+                qui
+                voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt
+                quia velit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid venue-gallery-container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row g-0">
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="/img/20171021164827_IMG_1426.jpg" class="glightbox" data-gall="venue-gallery">
+              <img src="/img/20171021164827_IMG_1426.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="/img/DSCF8227.jpg" class="glightbox" data-gall="venue-gallery">
+              <img src="/img/DSCF8227.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="/img/DSCF8242.jpg" class="glightbox" data-gall="venue-gallery">
+              <img src="/img/DSCF8242.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="/img/DSCF8230.jpg" class="glightbox" data-gall="venue-gallery">
+              <img src="/img/DSCF8230.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="/img/20171021172445_IMG_1503.jpg" class="glightbox" data-gall="venue-gallery">
+              <img src="/img/20171021172445_IMG_1503.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="/img/DSCF8256.jpg" class="glightbox" data-gall="venue-gallery">
+              <img src="/img/DSCF8256.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="/img/20171021160423_IMG_1200.jpg" class="glightbox" data-gall="venue-gallery">
+              <img src="/img/20171021160423_IMG_1200.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="venue-gallery">
+            <a href="/img/20171021194056_IMG_1524.jpg" class="glightbox" data-gall="venue-gallery">
+              <img src="/img/20171021194056_IMG_1524.jpg" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Venue Section -->
+</main>
+{{ end }}
