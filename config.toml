@@ -13,7 +13,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     languageName = "English"
     languageCode = "en"
 [params]
-    images = ["/images/hero-bg.jpg"]
+    images = ["/images/hero-bg.webp"]
     [taxonomies]
         series = "series"
     [[params.links]]
