@@ -28,6 +28,30 @@ other = "Tickets"
 [wordCount]
 other = "This article has {{ .WordCount }} words."
 
+[yourName]
+other = "Your Name"
+
+[yourEmail]
+other = "Your Email"
+
+[subject]
+other = "Subject"
+
+[message]
+other = "Message"
+
+[loading]
+other = "Loading"
+
+[sentMessage]
+other = "Your message has been sent. Thank you!"
+
+[sendMessage]
+other = "Send Message"
+
+[thankyou]
+other = "Thank you!"
+
 [readingTime]
 one = "One minute to read"
 other = "{{.Count}} minutes to read"

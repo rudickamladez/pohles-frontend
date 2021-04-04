@@ -1,0 +1,41 @@
+{{ define "main" }}
+<main id="main" class="main-page">
+  <section id="contact" class="section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Description }}</p>
+      </div>
+      {{ .Content }}
+      <div class="form">
+        <form action="#" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <input type="text" name="name" class="form-control" id="name" placeholder={{ i18n "yourName" }} required>
+            </div>
+            <div class="form-group col-md-6 mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder={{ i18n "yourEmail" }}
+                required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder={{ i18n "subject" }}
+              required>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder={{ i18n "message" }} required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">{{ i18n "loading" }}</div>
+            <div class="error-message"></div>
+            <div class="sent-message">{{ i18n "sentMessage" }}</div>
+          </div>
+          <div class="text-center"><button type="submit">{{ i18n "sendMessage" }}</button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+{{/* {{ $script := resources.Get "vendor/php-email-form/validate.js" | minify }}
+<script src="{{ $script.RelPermalink }}"></script> */}}
+{{ end }}

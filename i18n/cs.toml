@@ -25,6 +25,30 @@ other = "Kontakt"
 [tickets]
 other = "Vstupenky"
 
+[yourName]
+other = "Vaše jméno"
+
+[yourEmail]
+other = "Váš email"
+
+[subject]
+other = "Předmět"
+
+[message]
+other = "Zpráva"
+
+[loading]
+other = "Načítání"
+
+[sentMessage]
+other = "Vaše zpráva byla úspěšně odeslána."
+
+[sendMessage]
+other = "Odeslat zprávu"
+
+[thankyou]
+other = "Děkujeme!"
+
 [readingTime]
 one = "Minuta čtení"
 other = "{{.Count}} minut čtení"
