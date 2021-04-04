@@ -1,10 +1,3 @@
-/**
-* Template Name: TheEvent - v4.1.0
-* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -19,7 +12,7 @@ body {
 }
 
 a {
-  color: #f82249;
+  color: #008b38;
   text-decoration: none;
   transition: 0.5s;
 }
@@ -70,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #f82249;
+  background: #008b38;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -84,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:hover {
-  background: #f94a6a;
+  background: #00a945;
   color: #fff;
 }
 
@@ -107,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 60px;
   height: 5px;
-  background: #f82249;
+  background: #008b38;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -161,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo h1 span {
-  color: #f82249;
+  color: #008b38;
 }
 
 #header #logo h1 a, #header #logo h1 a:hover {
@@ -185,11 +178,11 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .buy-tickets {
   color: #fff;
-  background: #f82249;
+  background: #008b38;
   padding: 7px 22px;
   margin: 0 0 0 15px;
   border-radius: 50px;
-  border: 2px solid #f82249;
+  border: 2px solid #008b38;
   transition: all ease-in-out 0.3s;
   font-weight: 500;
   line-height: 1;
@@ -266,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #f82249;
+  background-color: #008b38;
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -311,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #f82249;
+  color: #008b38;
 }
 
 .navbar .dropdown:hover > ul {
@@ -409,7 +402,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #f82249;
+  color: #008b38;
 }
 
 .navbar-mobile .getstarted {
@@ -441,7 +434,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #f82249;
+  color: #008b38;
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
@@ -505,7 +498,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 span {
-  color: #f82249;
+  color: #008b38;
 }
 
 @media (max-width: 991px) {
@@ -529,7 +522,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#f82249 50%, rgba(101, 111, 150, 0.15) 52%);
+  background: radial-gradient(#008b38 50%, rgba(101, 111, 150, 0.15) 52%);
   border-radius: 50%;
   display: block;
   position: relative;
@@ -575,7 +568,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .play-btn:hover::after {
-  border-left: 15px solid #f82249;
+  border-left: 15px solid #008b38;
   transform: scale(20);
 }
 
@@ -611,11 +604,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  border: 2px solid #f82249;
+  border: 2px solid #008b38;
 }
 
 #hero .about-btn:hover {
-  background: #f82249;
+  background: #008b38;
   color: #fff;
 }
 
@@ -742,7 +735,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #speakers .speaker .details a:hover {
-  color: #f82249;
+  color: #008b38;
 }
 
 #speakers .speaker:hover .details {
@@ -779,7 +772,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #speakers-details .details .social a:hover {
-  background: #f82249;
+  background: #008b38;
   color: #fff;
 }
 
@@ -842,7 +835,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #schedule .nav-tabs a.active {
-  background-color: #f82249;
+  background-color: #008b38;
   color: #fff;
 }
 
@@ -1022,7 +1015,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hotels a:hover {
-  color: #f82249;
+  color: #008b38;
 }
 
 #hotels .stars {
@@ -1060,11 +1053,11 @@ h1, h2, h3, h4, h5, h6 {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #f82249;
+  border: 1px solid #008b38;
 }
 
 #gallery .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #f82249;
+  background-color: #008b38;
 }
 
 #gallery .swiper-slide-active {
@@ -1076,7 +1069,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 40px 0;
   }
   #gallery .swiper-slide-active {
-    border: 5px solid #f82249;
+    border: 5px solid #008b38;
     padding: 4px;
     background: #fff;
     z-index: 1;
@@ -1139,13 +1132,13 @@ h1, h2, h3, h4, h5, h6 {
 #faq .faq-list .question {
   display: block;
   position: relative;
-  font-family: #f82249;
+  font-family: #008b38;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   padding-left: 25px;
   cursor: pointer;
-  color: #e0072f;
+  color: #006c2c;
   transition: 0.3s;
 }
 
@@ -1170,7 +1163,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #faq .faq-list .collapsed:hover {
-  color: #f82249;
+  color: #008b38;
 }
 
 #faq .faq-list .collapsed .icon-show {
@@ -1235,7 +1228,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 0;
   padding: 9px 25px;
   cursor: pointer;
-  background: #f82249;
+  background: #008b38;
   color: #fff;
   transition: all 0.3s ease;
   outline: none;
@@ -1244,7 +1237,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #subscribe button:hover {
-  background: #e0072f;
+  background: #006c2c;
 }
 
 @media (max-width: 460px) {
@@ -1300,13 +1293,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   padding: 10px 40px;
   transition: all 0.2s;
-  background-color: #f82249;
+  background-color: #008b38;
   border: 0;
   color: #fff;
 }
 
 #buy-tickets .card .btn:hover {
-  background-color: #e0072f;
+  background-color: #006c2c;
 }
 
 #buy-tickets #buy-ticket-modal input, #buy-tickets #buy-ticket-modal select {
@@ -1318,13 +1311,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   padding: 10px 40px;
   transition: all 0.2s;
-  background-color: #f82249;
+  background-color: #008b38;
   border: 0;
   color: #fff;
 }
 
 #buy-tickets #buy-ticket-modal .btn:hover {
-  background-color: #e0072f;
+  background-color: #006c2c;
 }
 
 /*--------------------------------------------------------------
@@ -1343,7 +1336,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   display: inline-block;
   margin-bottom: 10px;
-  color: #f82249;
+  color: #008b38;
 }
 
 #contact .contact-info address, #contact .contact-info p {
@@ -1364,7 +1357,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contact .contact-info a:hover {
-  color: #f82249;
+  color: #008b38;
 }
 
 #contact .contact-address, #contact .contact-phone, #contact .contact-email {
@@ -1433,7 +1426,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contact .php-email-form input:focus, #contact .php-email-form textarea:focus {
-  border-color: #f82249;
+  border-color: #008b38;
 }
 
 #contact .php-email-form input {
@@ -1445,7 +1438,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contact .php-email-form button[type="submit"] {
-  background: #f82249;
+  background: #008b38;
   border: 0;
   padding: 10px 40px;
   color: #fff;
@@ -1455,7 +1448,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contact .php-email-form button[type="submit"]:hover {
-  background: #e0072f;
+  background: #006c2c;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1539,7 +1532,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #f82249;
+  background: #008b38;
   color: #fff;
 }
 
@@ -1550,7 +1543,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
-  border-bottom: 2px solid #f82249;
+  border-bottom: 2px solid #008b38;
 }
 
 #footer .footer-top .footer-links {
@@ -1565,7 +1558,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 5px;
-  color: #f82249;
+  color: #008b38;
   font-size: 18px;
 }
 
@@ -1583,7 +1576,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #f82249;
+  color: #008b38;
 }
 
 #footer .footer-top .footer-contact {
@@ -1605,7 +1598,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"] {
-  background: #f82249;
+  background: #008b38;
   border: 0;
   width: 35%;
   padding: 6px 0;
@@ -1616,7 +1609,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"]:hover {
-  background: #e0072f;
+  background: #006c2c;
 }
 
 #footer .copyright {
