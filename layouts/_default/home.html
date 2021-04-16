@@ -9,24 +9,19 @@
 <!-- ======= About Section ======= -->
 <section id="about">
   <div class="container" data-aos="fade-up">
-    <div class="row">
-      <div class="col-lg-6">
-        <h2>{{ i18n "aboutEvent"}}</h2>
-        <p>Sed nam ut dolor qui repellendus iusto odit. Possimus inventore eveniet accusamus error amet eius aut
-          accusantium et. Non odit consequatur repudiandae sequi ea odio molestiae. Enim possimus sunt inventore in
-          est ut optio sequi unde.</p>
-      </div>
+    <div class="row justify-content-center">
       <div class="col-lg-3">
         <h3>{{ i18n "where" }}</h3>
-        <p>Downtown Conference Center, New York</p>
+        <p>{{ .Params.about.where | safeHTML }}</p>
       </div>
       <div class="col-lg-3">
         <h3>{{ i18n "when" }}</h3>
-        <p>Monday to Wednesday<br>10-12 December</p>
+        <p>{{ .Params.about.when | safeHTML }}</p>
       </div>
     </div>
   </div>
-</section><!-- End About Section -->
+</section>
+<!-- End About Section -->
 <!-- ======= Schedule Section ======= -->
 <section id="schedule" class="section-with-bg">
   <div class="container" data-aos="fade-up">
@@ -47,5 +42,6 @@
       </div>
     </div>
   </div>
-</section><!-- End Schedule Section -->
+</section>
+<!-- End Schedule Section -->
 {{ end }}
