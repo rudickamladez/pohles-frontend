@@ -1,20 +1,23 @@
 <header id="header" class="d-flex align-items-center {{ if not .IsHome }} header-inner {{ end }}">
     <div class="container-fluid container-xxl d-flex align-items-center">
-
         <div id="logo" class="me-auto">
-            <h1><a href="/">Poh<span>Les</span></a></h1>
+            <a href="/"><img src="/favicon.ico" alt="PohLes"></a>
         </div>
-
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
-                <li><a class="nav-link" href="/{{ .Lang }}/">{{ i18n "home" }}</a></li>
-                <li><a class="nav-link" href="/{{ .Lang }}/about">{{ i18n "about" }}</a></li>
-                <li><a class="nav-link" href="/{{ .Lang }}/contact">{{ i18n "contact" }}</a></li>
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                {{ $active := "" }}
+                {{ if eq $currentPage.RelPermalink .URL }}
+                {{ $active = " active" }}
+                {{ end }}
+                <li>
+                    <a href="{{ .URL }}" class="nav-link{{ $active }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
-
         <a class="buy-tickets" href="/{{ .Lang }}/tickets">{{ i18n "tickets" }}</a>
-
     </div>
 </header>
