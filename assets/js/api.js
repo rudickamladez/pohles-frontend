@@ -52,7 +52,7 @@ function myCopyToClipboard(text) {
 }
 
 var API = {
-    endpoint: "https://api.rudickamladez.cz",
+    endpoint: "https://api.pohles.rudickamladez.cz",
     ticket: {
         easy: function (
             firstname,
