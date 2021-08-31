@@ -16,6 +16,12 @@ other = "This article has {{ .WordCount }} words."
 [yourName]
 other = "Your Name"
 
+[firstname]
+other = "Firstname"
+
+[lastname]
+other = "Lastname"
+
 [yourEmail]
 other = "Your Email"
 
@@ -31,8 +37,17 @@ other = "Loading"
 [sentMessage]
 other = "Your message has been sent. Thank you!"
 
+[errorMessage]
+other = "Ooops! Something went wrong."
+
+[successOrderMessage]
+other = "Success! You got your ticket. Check your mailbox."
+
 [sendMessage]
 other = "Send Message"
+
+[order]
+other = "Order"
 
 [thankyou]
 other = "Thank you!"

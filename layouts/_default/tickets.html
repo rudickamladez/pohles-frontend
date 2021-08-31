@@ -1,0 +1,116 @@
+{{ define "main" }}
+<main id="main" class="main-page">
+  <section id="contact" class="section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Description }}</p>
+      </div>
+      {{ .Content }}
+      <div class="form">
+        <form action="#" method="post" role="form" id="new-ticket-form" class="php-email-form">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <input type="text" name="name" class="form-control" id="firstname" placeholder={{ i18n "firstname" }}
+                required>
+            </div>
+            <div class="form-group col-md-6">
+              <input type="text" name="name" class="form-control" id="lastname" placeholder={{ i18n "lastname" }}
+                required>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="form-group col-md-12 mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder={{ i18n "yourEmail" }}
+                required>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="form-group">
+              <select class="form-control" id="time" required>
+                <option value="null" disabled selected>Vyberte čas</option>
+              </select>
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="loading" id="loading">{{ i18n "loading" }}</div>
+            <div class="error-message" id="error-message">{{ i18n "errorMessage" }}</div>
+            <div class="sent-message" id="sent-message">{{ i18n "successOrderMessage" }}</div>
+          </div>
+          <div class="text-center">
+            <button type="submit">
+              {{ i18n "order" }}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  API.year.activeTimes().then((times) => {
+    const select = document.getElementById("time");
+    for (var i = 0; i < times.length; i++) {
+      var opt = times[i];
+      var el = document.createElement("option");
+      el.textContent = opt.name;
+      el.value = opt.id;
+      select.appendChild(el);
+    }
+  });
+
+  window.addEventListener("load", function () {
+    const buyer = JSON.parse(Cookies.get("buyer"));
+    // buyer DOM variables
+    const firstnameDOM = document.getElementById("firstname");
+    const lastnameDOM = document.getElementById("lastname");
+    const emailDOM = document.getElementById("email");
+    if (buyer) {
+      // fill input fields
+      firstnameDOM.value = buyer.firstname;
+      lastnameDOM.value = buyer.lastname;
+      emailDOM.value = buyer.email;
+    }
+
+    // API call status DOM variables
+    const loadingDOM = document.getElementById("loading");
+    const errorMessageDOM = document.getElementById("error-message");
+    const sentMessageDOM = document.getElementById("sent-message");
+
+    function sendData() {
+      loadingDOM.style = "display: initial;";
+
+      // POST API
+      API.ticket.easy(
+        firstnameDOM.value,
+        lastnameDOM.value,
+        emailDOM.value,
+        document.getElementById("time").value,
+      ).then((data) => {
+        console.log(data);
+        loadingDOM.style = "display: none;";
+        if (!data || !['unpaid', 'paid', 'cancelled'].includes(data.status)) {
+          errorMessageDOM.style = "display: initial;";
+        } else {
+          Cookies.set("customer", JSON.stringify({ firstname: firstname, lastname: lastname, email: email }));
+          sentMessageDOM.style = "display: initial;";
+        }
+      });
+    }
+
+    // Access the form element...
+    const form = document.getElementById("new-ticket-form");
+
+    // ...and take over its submit event.
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      errorMessageDOM.style = "display: none;";
+      sentMessageDOM.style = "display: none;";
+
+      sendData();
+    });
+  });
+</script>
+{{/* {{ $script := resources.Get "vendor/php-email-form/validate.js" | minify }}
+<script src="{{ $script.RelPermalink }}"></script> */}}
+{{ end }}

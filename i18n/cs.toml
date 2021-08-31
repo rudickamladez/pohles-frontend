@@ -13,6 +13,12 @@ other = "Vstupenky"
 [yourName]
 other = "Vaše jméno"
 
+[firstname]
+other = "Křestní jméno"
+
+[lastname]
+other = "Příjmení"
+
 [yourEmail]
 other = "Váš email"
 
@@ -28,8 +34,17 @@ other = "Načítání"
 [sentMessage]
 other = "Vaše zpráva byla úspěšně odeslána."
 
+[errorMessage]
+other = "Nastala chyba."
+
+[successOrderMessage]
+other = "Úspěšně jste si objednali vstupenku. Děkujeme."
+
 [sendMessage]
 other = "Odeslat zprávu"
+
+[order]
+other = "Objednat"
 
 [thankyou]
 other = "Děkujeme!"

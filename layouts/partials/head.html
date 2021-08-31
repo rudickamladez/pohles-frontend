@@ -38,4 +38,12 @@
     {{ $style := resources.Get "css/style.css" }}
     {{ $style = $style | minify }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+    <!-- Template Main JS File -->
+    {{ $script := resources.Get "js/api.js" | minify }}
+    <script src="{{ $script.RelPermalink }}"></script>
+
+    <!-- Template Main JS File -->
+    {{ $script := resources.Get "js/js.cookie.js" | minify }}
+    <script src="{{ $script.RelPermalink }}"></script>
 </head>
