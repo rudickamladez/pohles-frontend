@@ -38,7 +38,7 @@
             <div class="sent-message" id="sent-message">{{ i18n "successOrderMessage" }}</div>
           </div>
           <div class="text-center">
-            <button type="submit">
+            <button type="submit" id="submit-button">
               {{ i18n "order" }}
             </button>
           </div>
@@ -74,10 +74,11 @@
       emailDOM.value = buyer.email;
     }
 
-    // API call status DOM variables
+    // DOM variables
     const loadingDOM = document.getElementById("loading");
     const errorMessageDOM = document.getElementById("error-message");
     const sentMessageDOM = document.getElementById("sent-message");
+    const submitButtonDOM = document.getElementById("submit-button");
 
     function sendData() {
       loadingDOM.style = "display: initial;";
@@ -112,6 +113,7 @@
     // ...and take over its submit event.
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+      submitButtonDOM.style = "display: none;";
       errorMessageDOM.style = "display: none;";
       sentMessageDOM.style = "display: none;";
 
