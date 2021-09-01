@@ -94,7 +94,13 @@
         if (!data || !['unpaid', 'paid', 'cancelled'].includes(data.status)) {
           errorMessageDOM.style = "display: initial;";
         } else {
-          Cookies.set("customer", JSON.stringify({ firstname: firstname, lastname: lastname, email: email }));
+          Cookies.set(
+            "buyer",
+            JSON.stringify({
+              firstname: firstnameDOM.value,
+              lastname: lastnameDOM.value,
+              email: emailDOM.value
+            }));
           sentMessageDOM.style = "display: initial;";
         }
       });
