@@ -60,7 +60,7 @@
   });
 
   window.addEventListener("load", function () {
-    const buyer = JSON.parse(Cookies.get("buyer"));
+    const buyer = JSON.parse(Cookies.get("buyer")) | undefined;
     // buyer DOM variables
     const firstnameDOM = document.getElementById("firstname");
     const lastnameDOM = document.getElementById("lastname");
