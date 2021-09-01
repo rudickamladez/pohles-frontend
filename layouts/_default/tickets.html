@@ -60,12 +60,14 @@
   });
 
   window.addEventListener("load", function () {
-    const buyer = JSON.parse(Cookies.get("buyer")) | undefined;
     // buyer DOM variables
     const firstnameDOM = document.getElementById("firstname");
     const lastnameDOM = document.getElementById("lastname");
     const emailDOM = document.getElementById("email");
+
+    let buyer = Cookies.get("buyer");
     if (buyer) {
+      buyer = JSON.parse(buyer);
       // fill input fields
       firstnameDOM.value = buyer.firstname;
       lastnameDOM.value = buyer.lastname;
