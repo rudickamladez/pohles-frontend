@@ -38,13 +38,16 @@ other = "Vaše zpráva byla úspěšně odeslána."
 other = "Nastala chyba."
 
 [successOrderMessage]
-other = "Úspěšně jste si vytvořili objednávku vstupenky, tu potvrďte prosím v emailu, který jsme Vám zaslali na Vámi zadaný email."
+other = "Úspěšně jste vytvořil/a objednávku vstupenky, tu musíte ještě potvrdit v emailu, který jsme Vám zaslali na Vámi zadanou emailovou adresu."
 
 [sendMessage]
 other = "Odeslat zprávu"
 
 [order]
 other = "Objednat"
+
+[orderAnotherTicket]
+other = "Objednat další vstupenku"
 
 [thankyou]
 other = "Děkujeme!"

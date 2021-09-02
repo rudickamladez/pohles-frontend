@@ -49,6 +49,9 @@ other = "Send Message"
 [order]
 other = "Order"
 
+[orderAnotherTicket]
+other = "Order another ticket"
+
 [thankyou]
 other = "Thank you!"
 

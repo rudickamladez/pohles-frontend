@@ -28,7 +28,7 @@
           <div class="row">
             <div class="form-group mt-2 mt-md-3">
               <select class="form-control" id="time" required>
-                <option value="null" disabled selected>Vyberte čas</option>
+                <option value="default" disabled selected>Vyberte čas</option>
               </select>
             </div>
           </div>
@@ -41,6 +41,9 @@
             <button type="submit" id="submit-button">
               {{ i18n "order" }}
             </button>
+            <button type="submit" id="order-another-ticket-button" style="display: none;">
+              {{ i18n "orderAnotherTicket" }}
+            </button>
           </div>
         </form>
       </div>
@@ -48,18 +51,23 @@
   </section>
 </main>
 <script>
-  API.year.activeTimes().then((times) => {
-    const select = document.getElementById("time");
-    for (var i = 0; i < times.length; i++) {
-      var opt = times[i];
-      var el = document.createElement("option");
-      el.textContent = opt.name;
-      el.value = opt.id;
-      select.appendChild(el);
-    }
-  });
+  function updateTimes() {
+    API.year.activeTimes().then((times) => {
+      const select = document.getElementById("time");
+      select.innerHTML = "<option value=\"default\" disabled selected>Vyberte čas</option>";
+      for (var i = 0; i < times.length; i++) {
+        var opt = times[i];
+        var el = document.createElement("option");
+        el.textContent = opt.name;
+        el.value = opt.id;
+        select.appendChild(el);
+      }
+    });
+  }
 
   window.addEventListener("load", function () {
+    updateTimes();
+
     // buyer DOM variables
     const firstnameDOM = document.getElementById("firstname");
     const lastnameDOM = document.getElementById("lastname");
@@ -79,6 +87,8 @@
     const errorMessageDOM = document.getElementById("error-message");
     const sentMessageDOM = document.getElementById("sent-message");
     const submitButtonDOM = document.getElementById("submit-button");
+    const orderAnotherTicketButtonDOM = document.getElementById("order-another-ticket-button");
+    const timeDOM = document.getElementById("time");
 
     function sendData() {
       loadingDOM.style = "display: initial;";
@@ -88,11 +98,14 @@
         firstnameDOM.value,
         lastnameDOM.value,
         emailDOM.value,
-        document.getElementById("time").value,
-      ).then((data) => {
-        console.log(data);
+        timeDOM.value,
+      ).then(async (response) => {
+        console.log(response);
         loadingDOM.style = "display: none;";
-        if (!data || !['unpaid', 'paid', 'cancelled'].includes(data.status)) {
+        if (response.status != 200) {
+          const errorText = await response.text();
+          console.error(errorText);
+          errorMessageDOM.innerHTML += `<br/>${errorText}`;
           errorMessageDOM.style = "display: initial;";
         } else {
           Cookies.set(
@@ -102,7 +115,12 @@
               lastname: lastnameDOM.value,
               email: emailDOM.value
             }));
+          updateTimes();
           sentMessageDOM.style = "display: initial;";
+          orderAnotherTicketButtonDOM.style = "display: initial;";
+          setTimeout(() => {
+            sentMessageDOM.style = "display: hide;";
+          }, 10000);
         }
       });
     }
@@ -117,10 +135,15 @@
       errorMessageDOM.style = "display: none;";
       sentMessageDOM.style = "display: none;";
 
+      if (timeDOM.value == 'default') {
+        errorMessageDOM.innerHTML = "Vyberte si platný čas";
+        errorMessageDOM.style = "display: initial;";
+        submitButtonDOM.style = "display: initial;";
+        return;
+      }
+
       sendData();
     });
   });
 </script>
-{{/* {{ $script := resources.Get "vendor/php-email-form/validate.js" | minify }}
-<script src="{{ $script.RelPermalink }}"></script> */}}
 {{ end }}
