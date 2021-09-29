@@ -64,3 +64,9 @@ other = "{{.Count}} minut čtení"
 
 [readArticle]
 other = "Číst článek"
+
+[selectTime]
+other = "Vyberte čas"
+
+[freePositions]
+other = "volných míst"

@@ -76,10 +76,10 @@ var API = {
         },
     },
 
-    year: {
-        activeTimes: function () {
+    time: {
+        active: function () {
             return getData(
-                '/year/active/times'
+                '/time/active'
             )
         },
     }

@@ -28,8 +28,11 @@
           <div class="row">
             <div class="form-group mt-2 mt-md-3">
               <select class="form-control" id="time" required>
-                <option value="default" disabled selected>Vyberte čas</option>
+                <option value="default" disabled selected>{{ i18n "selectTime" }}</option>
               </select>
+              <span style="display: none;" id="freePositions">
+                {{ i18n "freePositions" }}
+              </span>
             </div>
           </div>
           <div class="row my-3">
@@ -52,14 +55,20 @@
 </main>
 <script>
   function updateTimes() {
-    API.year.activeTimes().then((times) => {
+    API.time.active().then((times) => {
+      console.log(times);
       const select = document.getElementById("time");
       select.innerHTML = "<option value=\"default\" disabled selected>Vyberte čas</option>";
       for (var i = 0; i < times.length; i++) {
         var opt = times[i];
         var el = document.createElement("option");
-        el.textContent = opt.name;
-        el.value = opt.id;
+        el.textContent = `${opt.name} - ${opt.freePositions} ${document.getElementById("freePositions").innerText}`;
+        if (opt.freePositions == 0) {
+          el.disabled = "disabled";
+          el.value = "null";
+        } else {
+          el.value = opt.id;
+        }
         select.appendChild(el);
       }
     });
