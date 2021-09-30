@@ -4,4 +4,4 @@ description: Jednoduše a pohodlně
 layout: tickets
 ---
 
-Pro objednání vstupenky vyplňte následující formulář. **Vstupenka je platná až po potvrzení objednávky.** Všechna vstupní pole jsou povinná. Údaje poskytnuté v&nbsp;rámci rezervace budou použity jen pro&nbsp;účely této akce, vyplněním formuláře s těmito podmínkami souhlasíte.
+Pro objednání rezervace vyplňte následující formulář. **Rezervace je platná až po potvrzení objednávky.** Všechna vstupní pole jsou povinná. Údaje poskytnuté v&nbsp;rámci rezervace budou použity jen pro&nbsp;účely této akce, vyplněním formuláře s těmito podmínkami souhlasíte.

@@ -12,4 +12,4 @@ menu:
     weight: 2
 ---
 
-Pohádkový les v Rudici má již více než deset let dlouhou tradici.
+Pohádkový les v Rudici má již více než dvacet let dlouhou tradici.
