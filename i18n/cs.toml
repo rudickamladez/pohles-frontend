@@ -38,7 +38,7 @@ other = "Vaše zpráva byla úspěšně odeslána."
 other = "Nastala chyba."
 
 [successOrderMessage]
-other = "Úspěšně jste vytvořil/a objednávku vstupenky, tu musíte ještě potvrdit v emailu, který jsme Vám zaslali na Vámi zadanou emailovou adresu."
+other = "Úspěšně jste vytvořil/a rezervaci vstupenky. Pro zkontrolujte si prosím, že Vám došel potvrzovací email, který jsme Vám zaslali na Vámi zadanou emailovou adresu. Pokud Vám email nedorazil, tak nám prosím napište email na pohles@rudickamladez.cz."
 
 [sendMessage]
 other = "Odeslat zprávu"

@@ -62,12 +62,13 @@
       for (var i = 0; i < times.length; i++) {
         var opt = times[i];
         var el = document.createElement("option");
-        el.textContent = `${opt.name} - ${opt.freePositions} ${document.getElementById("freePositions").innerText}`;
-        if (opt.freePositions == 0) {
+        if (opt.freePositions <= 0) {
+          el.textContent = `${opt.name} - 0 ${document.getElementById("freePositions").innerText}`;
           el.disabled = "disabled";
           el.value = "null";
         } else {
-          el.value = opt.id;
+          el.textContent = `${opt.name} - ${document.getElementById("freePositions").innerText}: ${opt.freePositions}`;
+          el.value = opt._id;
         }
         select.appendChild(el);
       }
@@ -114,9 +115,42 @@
         if (response.status != 200) {
           const errorText = await response.text();
           console.error(errorText);
+          if (response.status == 400) {
+            try {
+              const errorTextInJSON = JSON.parse(errorText);
+              let message = "";
+              console.log(errorTextInJSON);
+              switch (errorTextInJSON.message) {
+                case 'Bad time.':
+                  message = "Špatný čas.";
+                  break;
+                case "Not found time for new ticket.":
+                  message = "Nebyl nalezen čas pro novou rezervaci.";
+                  break;
+                case "Cannot create new ticket! Time is full.":
+                  message = "Nelze vytvořit rezervaci, vybraný čas je plný. Vyberte si prosím jiný.";
+                  submitButtonDOM.style = "display: initial;";
+                  break;
+                case "End of reservations.":
+                  message = "Nelze vytvořit objednávku, protože rezervaci jsou již uzavřeny.";
+                  errorMessageDOM.innerHTML = message;
+                  errorMessageDOM.style = "display: initial;";
+                  return;
+                  break;
+              }
+              errorMessageDOM.innerHTML += `<br/>${message}`;
+              errorMessageDOM.style = "display: initial;";
+              return;
+            }
+            catch (exception) {
+              console.error(exception);
+            }
+          }
           errorMessageDOM.innerHTML += `<br/>${errorText}`;
           errorMessageDOM.style = "display: initial;";
         } else {
+          const res = await response.text();
+          console.log(res);
           Cookies.set(
             "buyer",
             JSON.stringify({
