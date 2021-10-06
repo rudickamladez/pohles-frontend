@@ -4,7 +4,7 @@ hero:
   subheading: 'Jump with us from fairy tale to fairy tale'
 about:
   where: 'Windmill in Rudice'
-  when: '16. 10. 2021 at 15PM'
+  when: '16. 10. 2021 at 14PM'
 menu:
   main:
     name: Home
