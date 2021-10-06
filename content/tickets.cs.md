@@ -1,5 +1,5 @@
 ---
-title: Vstupenky
+title: Rezervace
 description: Jednoduše a pohodlně
 layout: tickets
 ---
