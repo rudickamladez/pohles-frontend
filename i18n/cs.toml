@@ -14,10 +14,10 @@ other = "Rezervace"
 other = "Vaše jméno"
 
 [firstname]
-other = "Křestní jméno"
+other = "Křestní jméno doprovodu"
 
 [lastname]
-other = "Příjmení"
+other = "Příjmení doprovodu"
 
 [yourEmail]
 other = "Váš email"
