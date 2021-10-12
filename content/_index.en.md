@@ -1,4 +1,6 @@
 ---
+description: 'Jump with us from fairy tale to fairy tale'
+image: '/img/20171021160423_IMG_1200.webp'
 hero:
   heading: 'Fairytale forest in Rudice'
   subheading: 'Jump with us from fairy tale to fairy tale'

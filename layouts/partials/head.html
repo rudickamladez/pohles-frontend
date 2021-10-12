@@ -9,13 +9,9 @@
         {{ .Title }} &middot; {{ .Site.Title }}
         {{- end }}
     </title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    {{- if .IsHome }}
-    <meta name="description" content="{{ i18n " homeDescription" }}">
-    {{- else if .Description }}
-    <meta name="description" content="{{ .Description }}">
-    {{- end }}
+    <meta content="Pohádkový les, Rudice" name="keywords" />
+    <meta name="description" content="{{ .Description }}" />
+    <meta property="og:image" content="{{ .Params.image }}" />
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
