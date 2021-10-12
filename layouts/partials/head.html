@@ -11,7 +11,7 @@
     </title>
     <meta content="Pohádkový les, Rudice" name="keywords" />
     <meta name="description" content="{{ .Description }}" />
-    <meta property="og:image" content="{{ .Params.image }}" />
+    {{ template "_internal/opengraph.html" . }}
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
