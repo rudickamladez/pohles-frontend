@@ -1,7 +1,7 @@
 ---
 description: 'Skočte si s námi z pohádky do pohádky'
 images:
-  - '/img/20171021160423_IMG_1200.webp'
+  - /img/20171021160423_IMG_1200.webp
 title: 'Pohádkový les Rudice - Rezervujte si své místo ještě dnes'
 hero:
   heading: 'Pohádkový&nbsp;les<br/><span>Rudice</span>'
