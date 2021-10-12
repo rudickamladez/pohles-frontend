@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://pohles.rudickamladez.cz"
 defaultContentLanguage = "cs"
 defaultContentLanguageInSubdir = true
 title = "Pohádkový les Rudice"
@@ -13,6 +13,10 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     languageName = "English"
     languageCode = "en"
 [params]
+    siteURL = "https://pohles.rudickamladez.cz"
+    lang = "cs"
+    locale = "cs_CZ"
+    gatag = "UA-144639332-2"
     images = ["/images/hero-bg.webp"]
     [taxonomies]
         series = "series"
@@ -24,3 +28,5 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
         icon = "envelope"
         title = "E-mail"
         url = "mailto:pohles@rudickamladez.cz"
+[params.seo]
+    image = "/images/hero-bg.webp"
