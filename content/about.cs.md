@@ -41,4 +41,4 @@ menu:
     weight: 2
 ---
 
-Pohádkový les v Rudici má již více než dvacet let dlouhou tradici.
+Pohádkový les v Rudici má již více než dvacet let dlouhou tradici. Délka trasy je do pěti kilometrů. Cesta naším lesem je zpevněná, tudíž pro kočárky vhodná a každý rok rodinami s kočárky hodně navštěvovaná. Více Vám prozradí videa na [YouTube](https://youtube.com/playlist?list=PLfohfqLRYMDHG0lSzaMx9FADPa7Cm1HOc).

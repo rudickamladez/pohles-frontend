@@ -41,4 +41,7 @@ menu:
     weight: 2
 ---
 
-The fairytale forest in Rudice has a long tradition for more than ten years.
+The Fairytale forest in Rudice has a long tradition for more than 20 years.
+The length of the route is about 4,5km.
+The road is not paved but every year used by many strollers without any problems. 
+You can see more about this event on following [videos](https://youtube.com/playlist?list=PLfohfqLRYMDHG0lSzaMx9FADPa7Cm1HOc).
