@@ -35,6 +35,9 @@ venue:
   info:
     heading: Windmill in Rudice
     description: 'Our fairytale forest begins in the area of the Rudický Větrný mlýn, a historical monument admired by many tourists, where it also ends. An unwritten tradition is that the children at the finish will get a snack, which they will later roast on the fire. '
+  parking:
+    heading: Parking
+    description: Visitors arriving by car are kindly requested to use the car park. <a href="https://goo.gl/maps/EPPPv2R1ow9DStVRA">Google Maps</a>
 menu:
   main:
     name: About

@@ -925,11 +925,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #venue .venue-info {
-  background: url("../img/venue-info-bg.webp") top center no-repeat;
-  background-size: cover;
+  background-size: cover !important;
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.venue-windmill-bg {
+  background: url("../img/venue-info-bg.webp") top center no-repeat;
+}
+
+
+.venue-parking-bg {
+  background: url("../img/IMG_20211014_094415.webp") top center no-repeat;
 }
 
 #venue .venue-info:before {

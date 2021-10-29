@@ -35,10 +35,13 @@ venue:
   info:
     heading: Větrný mlýn v Rudici
     description: 'Náš pohádkový les začíná v areálu rudického Větrného mlýna, mnoha turisty obdivovanou historickou památkou, kde zároveň i končí. Nepsanou tradicí je, že děti v cíli dostanou buřt, který si na ohni později opékají.'
+  parking:
+    heading: Parkování
+    description: Návštěvníky přijíždějící autem prosíme, aby využili <a target="_blank" href="https://goo.gl/maps/EPPPv2R1ow9DStVRA">parkoviště u kaple sv. Barbory</a>, případně <a target="_blank" href="https://goo.gl/maps/XxFRtueFHpp3LNHX7">parkoviště u lomu Seč</a>.
 menu:
   main:
     name: O události
     weight: 2
 ---
 
-Pohádkový les v Rudici má již více než dvacet let dlouhou tradici. Délka trasy je do pěti kilometrů. Cesta naším lesem je zpevněná, tudíž pro kočárky vhodná a každý rok rodinami s kočárky hodně navštěvovaná. Více Vám prozradí videa na [YouTube](https://youtube.com/playlist?list=PLfohfqLRYMDHG0lSzaMx9FADPa7Cm1HOc).
+Pohádkový les v Rudici má již více než dvacet let dlouhou tradici. Délka trasy je do pěti kilometrů. Cesta naším lesem je zpevněná, tudíž pro kočárky vhodná a každý rok rodinami s kočárky hodně navštěvovaná. Více Vám prozradí fotogalerie níže na stránce a videa na [YouTube](https://youtube.com/playlist?list=PLfohfqLRYMDHG0lSzaMx9FADPa7Cm1HOc).
