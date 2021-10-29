@@ -16,8 +16,10 @@
                 </li>
                 {{ end }}
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
         <a class="buy-tickets" href="/{{ .Lang }}/tickets">{{ i18n "tickets" }}</a>
+        <div style="margin-left: 10px; color: white;" class="mobile-nav-toggle">
+            {{ partial "fontawesome.html" "bars" }}
+        </div>
     </div>
 </header>
