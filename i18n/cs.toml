@@ -14,13 +14,22 @@ other = "Rezervace"
 other = "Vaše jméno"
 
 [firstname]
-other = "Křestní jméno doprovodu"
+other = "Křestní jméno"
+
+[firstnameOfChild]
+other = "Křestní jméno dítěte"
 
 [lastname]
 other = "Příjmení doprovodu"
 
+[lastnameOfChild]
+other = "Příjmení dítěte"
+
 [yourEmail]
 other = "Váš email"
+
+[emailOfParent]
+other = "Email doprovodu"
 
 [subject]
 other = "Předmět"

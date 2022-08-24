@@ -19,11 +19,20 @@ other = "Your Name"
 [firstname]
 other = "Firstname"
 
+[firstnameOfChild]
+other = "Firstname of child"
+
 [lastname]
 other = "Lastname"
 
+[lastnameOfChild]
+other = "Lastname of child"
+
 [yourEmail]
 other = "Your Email"
+
+[emailOfParent]
+other = "Email of parent"
 
 [subject]
 other = "Subject"
