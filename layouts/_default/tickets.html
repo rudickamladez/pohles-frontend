@@ -6,7 +6,13 @@
         <h2>{{ .Title }}</h2>
         <p>{{ .Description }}</p>
       </div>
-      {{ .Content }}
+      <div id="serverOutOfService" style="display: none;">
+        {{ i18n "serverOutOfService" }}
+        {{ i18n "contactUs" }}
+      </div>
+      <div id="content">
+        {{ .Content }}
+      </div>
       <div class="form">
         <form action="#" method="post" role="form" id="new-ticket-form">
           <div class="row">
@@ -55,24 +61,35 @@
 </main>
 <script>
   function updateTimes() {
-    API.time.active().then((times) => {
-      console.log(times);
-      const select = document.getElementById("time");
-      select.innerHTML = "<option value=\"default\" disabled selected>Vyberte čas</option>";
-      for (var i = 0; i < times.length; i++) {
-        var opt = times[i];
-        var el = document.createElement("option");
-        if (opt.freePositions <= 0) {
-          el.textContent = `${opt.name} - 0 ${document.getElementById("freePositions").innerText}`;
-          el.disabled = "disabled";
-          el.value = "null";
-        } else {
-          el.textContent = `${opt.name} - ${document.getElementById("freePositions").innerText}: ${opt.freePositions}`;
-          el.value = opt._id;
+    API.time.active()
+      .then((times) => {
+        console.log(times);
+        const select = document.getElementById("time");
+        select.innerHTML = "<option value=\"default\" disabled selected>Vyberte čas</option>";
+        for (var i = 0; i < times.length; i++) {
+          var opt = times[i];
+          var el = document.createElement("option");
+          if (opt.freePositions <= 0) {
+            el.textContent = `${opt.name} - 0 ${document.getElementById("freePositions").innerText}`;
+            el.disabled = "disabled";
+            el.value = "null";
+          } else {
+            el.textContent = `${opt.name} - ${document.getElementById("freePositions").innerText}: ${opt.freePositions}`;
+            el.value = opt._id;
+          }
+          select.appendChild(el);
         }
-        select.appendChild(el);
-      }
-    });
+      })
+      .catch((err) => {
+        console.error(err)
+
+        const contentDOM = document.getElementById("content");
+        const serverOutOfServiceDOM = document.getElementById("serverOutOfService");
+        const formDOM = document.getElementById("new-ticket-form");
+        formDOM.style = "display: none;";
+        contentDOM.style = "display: none;";
+        serverOutOfServiceDOM.style = "display: initial;";
+      });
   }
 
   window.addEventListener("load", function () {

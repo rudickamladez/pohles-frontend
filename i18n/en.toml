@@ -82,3 +82,9 @@ other = "Select time"
 
 [freePositions]
 other = "free positions"
+
+[serverOutOfService]
+other = "We're sorry, but it's not possible to order tickets at the moment."
+
+[contactUs]
+other = "Contact us on the contact page."

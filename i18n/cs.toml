@@ -79,3 +79,9 @@ other = "Vyberte čas"
 
 [freePositions]
 other = "volných míst"
+
+[serverOutOfService]
+other = "Omlouváme se, ale momentálně není možné vytvářet rezervace."
+
+[contactUs]
+other = "Kontaktujte nás na stránce kontakt."
