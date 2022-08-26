@@ -80,6 +80,12 @@ other = "Read article"
 [selectTime]
 other = "Select time"
 
+[selectValidTime]
+other = "Choose a valid time."
+
+[freePosition]
+other = "free position"
+
 [freePositions]
 other = "free positions"
 

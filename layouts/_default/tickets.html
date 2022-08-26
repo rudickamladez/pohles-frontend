@@ -33,11 +33,18 @@
           </div>
           <div class="row">
             <div class="form-group mt-2 mt-md-3">
-              <select class="form-control" id="time" required>
-                <option value="default" disabled selected>{{ i18n "selectTime" }}</option>
-              </select>
+              <select class="form-control" id="time" required></select>
+              <span style="display: none;" id="selectTime">
+                {{ i18n "selectTime" }}
+              </span>
+              <span style="display: none;" id="selectValidTime">
+                {{ i18n "selectValidTime" }}
+              </span>
               <span style="display: none;" id="freePositions">
                 {{ i18n "freePositions" }}
+              </span>
+              <span style="display: none;" id="freePosition">
+                {{ i18n "freePosition" }}
               </span>
             </div>
           </div>
@@ -61,11 +68,19 @@
 </main>
 <script>
   function updateTimes() {
+    const selectTimeDOM = document.getElementById("selectTime");
+    const defaultTimeOptionDOM = document.createElement("option");
+    defaultTimeOptionDOM.innerText = selectTimeDOM.innerText;
+    defaultTimeOptionDOM.selected = true;
+    defaultTimeOptionDOM.disabled = true;
+    defaultTimeOptionDOM.value = "default";
     API.time.active()
       .then((times) => {
-        console.log(times);
+        // console.log(times);
         const select = document.getElementById("time");
-        select.innerHTML = "<option value=\"default\" disabled selected>Vyberte čas</option>";
+        console.log(select.innerHTML);
+        select.innerHTML = "";
+        select.appendChild(defaultTimeOptionDOM);
         for (var i = 0; i < times.length; i++) {
           var opt = times[i];
           var el = document.createElement("option");
@@ -73,6 +88,9 @@
             el.textContent = `${opt.name} - 0 ${document.getElementById("freePositions").innerText}`;
             el.disabled = "disabled";
             el.value = "null";
+          } else if (opt.freePositions == 1) {
+            el.textContent = `${opt.name} - ${document.getElementById("freePosition").innerText}: ${opt.freePositions}`;
+            el.value = opt._id;
           } else {
             el.textContent = `${opt.name} - ${document.getElementById("freePositions").innerText}: ${opt.freePositions}`;
             el.value = opt._id;
@@ -83,9 +101,7 @@
       .catch((err) => {
         console.error(err)
 
-        const contentDOM = document.getElementById("content");
-        const serverOutOfServiceDOM = document.getElementById("serverOutOfService");
-        const formDOM = document.getElementById("new-ticket-form");
+        // When API backend is not available show error message
         formDOM.style = "display: none;";
         contentDOM.style = "display: none;";
         serverOutOfServiceDOM.style = "display: initial;";
@@ -93,6 +109,19 @@
   }
 
   window.addEventListener("load", function () {
+    // DOM variables
+    const contentDOM = document.getElementById("content");
+    const serverOutOfServiceDOM = document.getElementById("serverOutOfService");
+    const formDOM = document.getElementById("new-ticket-form");
+    const loadingDOM = document.getElementById("loading");
+    const errorMessageDOM = document.getElementById("error-message");
+    const sentMessageDOM = document.getElementById("sent-message");
+    const submitButtonDOM = document.getElementById("submit-button");
+    const orderAnotherTicketButtonDOM = document.getElementById("order-another-ticket-button");
+    const timeDOM = document.getElementById("time");
+    const selectValidTimeDOM = document.getElementById("selectValidTime");
+
+    // Fetch times from API
     updateTimes();
 
     // buyer DOM variables
@@ -104,18 +133,8 @@
     if (buyer) {
       buyer = JSON.parse(buyer);
       // fill input fields
-      firstnameDOM.value = buyer.firstname;
-      lastnameDOM.value = buyer.lastname;
       emailDOM.value = buyer.email;
     }
-
-    // DOM variables
-    const loadingDOM = document.getElementById("loading");
-    const errorMessageDOM = document.getElementById("error-message");
-    const sentMessageDOM = document.getElementById("sent-message");
-    const submitButtonDOM = document.getElementById("submit-button");
-    const orderAnotherTicketButtonDOM = document.getElementById("order-another-ticket-button");
-    const timeDOM = document.getElementById("time");
 
     function sendData() {
       loadingDOM.style = "display: initial;";
@@ -167,20 +186,20 @@
           errorMessageDOM.style = "display: initial;";
         } else {
           const res = await response.text();
-          console.log(res);
+          // console.log(res);
           Cookies.set(
             "buyer",
             JSON.stringify({
-              firstname: firstnameDOM.value,
-              lastname: lastnameDOM.value,
               email: emailDOM.value
             }));
+          firstnameDOM.value = "";
+          lastnameDOM.value = "";
           updateTimes();
           sentMessageDOM.style = "display: initial;";
           orderAnotherTicketButtonDOM.style = "display: initial;";
           setTimeout(() => {
             sentMessageDOM.style = "display: hide;";
-          }, 10000);
+          }, 20000);
         }
       });
     }
@@ -196,7 +215,7 @@
       sentMessageDOM.style = "display: none;";
 
       if (timeDOM.value == 'default') {
-        errorMessageDOM.innerHTML = "Vyberte si platný čas";
+        errorMessageDOM.innerHTML = selectValidTimeDOM.innerText;
         errorMessageDOM.style = "display: initial;";
         submitButtonDOM.style = "display: initial;";
         return;

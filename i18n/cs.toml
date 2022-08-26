@@ -77,7 +77,14 @@ other = "Číst článek"
 [selectTime]
 other = "Vyberte čas"
 
+[selectValidTime]
+other = "Vyberte si platný čas."
+
+[freePosition]
+other = "volné místo"
+
 [freePositions]
+one = "volné místo"
 other = "volných míst"
 
 [serverOutOfService]
