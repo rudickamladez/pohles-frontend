@@ -6,7 +6,7 @@ hero:
   subheading: 'Jump with us from fairy tale to fairy tale'
 about:
   where: 'Windmill in Rudice'
-  when: '17. 10. 2022 at 02:00 PM'
+  when: '15. 10. 2022 at 02:00 PM'
 menu:
   main:
     name: Home

@@ -14,7 +14,7 @@ hero:
   subheading: 'Skočte si s námi z pohádky do pohádky'
 about:
   where: 'Větrný mlýn v Rudici'
-  when: '17. 10. 2022 od cca 14:00'
+  when: '15. 10. 2022 od cca 14:00'
 menu:
   main:
     name: Domů
