@@ -13,8 +13,8 @@ hero:
   heading: 'Pohádkový&nbsp;les<br/><span>Rudice</span>'
   subheading: 'Skočte si s námi z pohádky do pohádky'
 about:
-  where: 'Větrný mlýn v Rudici'
-  when: '15. 10. 2022 od cca 14:00'
+  where: 'Sad pod Lipou v Rudici'
+  when: '15. 10. 2022 od 14:00'
 menu:
   main:
     name: Domů

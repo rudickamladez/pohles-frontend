@@ -5,7 +5,7 @@ hero:
   heading: 'Fairytale forest in Rudice'
   subheading: 'Jump with us from fairy tale to fairy tale'
 about:
-  where: 'Windmill in Rudice'
+  where: 'Sad pod Lipou areal in Rudice'
   when: '15. 10. 2022 at 02:00 PM'
 menu:
   main:
