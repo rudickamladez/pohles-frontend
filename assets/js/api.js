@@ -63,13 +63,11 @@ var API = {
             return postData(
                 '/ticket/easy',
                 {
-                    buyer: {
-                        name: {
-                            first: firstname,
-                            last: lastname,
-                        },
-                        email: email,
+                    name: {
+                        first: firstname,
+                        last: lastname,
                     },
+                    email: email,
                     time: time,
                 }
             )
