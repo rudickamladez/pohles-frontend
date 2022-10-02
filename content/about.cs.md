@@ -33,7 +33,7 @@ images:
   - /img/20171021194056_IMG_1524.webp
 venue:
   info:
-    heading: Větrný mlýn v Rudici
+    heading: Sad pod Lipou
     description: 'Náš pohádkový les začíná v areálu Sadu pod Lipou, kde zároveň i končí. Nepsanou tradicí je, že děti v cíli dostanou buřt, který si na ohni později opékají.'
   parking:
     heading: Parkování

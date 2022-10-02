@@ -33,7 +33,7 @@ images:
   - /img/20171021194056_IMG_1524.webp
 venue:
   info:
-    heading: Windmill in Rudice
+    heading: Sad pod Lipou
     description: 'Our fairytale forest begins in the area of the Sad pod Lipou areal, where it also ends. An unwritten tradition is that the children at the finish will get a snack, which they will later roast on the fire. '
   parking:
     heading: Parking
