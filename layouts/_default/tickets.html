@@ -68,6 +68,11 @@
 </main>
 <script>
   function updateTimes() {
+    const loadingDOM = document.getElementById("loading");
+    const contentDOM = document.getElementById("content");
+    const formDOM = document.getElementById("new-ticket-form");
+    const serverOutOfServiceDOM = document.getElementById("serverOutOfService");
+    loadingDOM.style = "display: initial;";
     const selectTimeDOM = document.getElementById("selectTime");
     const defaultTimeOptionDOM = document.createElement("option");
     defaultTimeOptionDOM.innerText = selectTimeDOM.innerText;
@@ -97,11 +102,13 @@
           }
           select.appendChild(el);
         }
+        loadingDOM.style = "display: none;"
       })
       .catch((err) => {
         console.error(err)
 
         // When API backend is not available show error message
+        loadingDOM.style = "display: none;";
         formDOM.style = "display: none;";
         contentDOM.style = "display: none;";
         serverOutOfServiceDOM.style = "display: initial;";
