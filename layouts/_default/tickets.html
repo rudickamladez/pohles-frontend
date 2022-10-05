@@ -12,6 +12,7 @@
       </div>
       <div id="content">
         {{ .Content }}
+        <span id="end-of-reservations-text" class="hidden">{{ i18n "endOfReservation" }}</span>
       </div>
       <div class="form">
         <form action="#" method="post" role="form" id="new-ticket-form">
@@ -67,6 +68,29 @@
   </section>
 </main>
 <script>
+  function writeEndOfReservationSentence() {
+    const endOfReservationDOM = document.getElementById("end-of-reservations");
+    const endOfReservationTextDOM = document.getElementById("end-of-reservations-text");
+    API.year.active()
+      .then((year) => {
+        if (!year) {
+          // Just don't change the text with info about reservation end.
+          return;
+        }
+        let timeFormatted = new Date(year.endOfReservations).toLocaleString();;
+        if (window.location.pathname.includes("cs")) {
+          const d = new Date(year.endOfReservations);
+          console.log(d);
+          timeFormatted = `${d.getDate()}. ${(d.getMonth() + 1)}. ${d.getFullYear()} v ${d.getHours()}:${d.getMinutes() == 0 ? "00" : d.getMinutes()}`;
+        }
+        endOfReservationDOM.innerText = `${endOfReservationTextDOM.innerText} ${timeFormatted}.`;
+      })
+      .catch((err) => {
+        console.error(err);
+        // Just don't change the text with info about reservation end.
+      })
+  }
+
   function updateTimes() {
     const loadingDOM = document.getElementById("loading");
     const contentDOM = document.getElementById("content");
@@ -128,6 +152,7 @@
     const timeDOM = document.getElementById("time");
     const selectValidTimeDOM = document.getElementById("selectValidTime");
 
+    writeEndOfReservationSentence();
     // Fetch times from API
     updateTimes();
 

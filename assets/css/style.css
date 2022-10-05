@@ -1655,3 +1655,7 @@ ICONS
 .icon {
   margin: 2px !important;
 }
+
+.hidden {
+  display: none !important;
+}

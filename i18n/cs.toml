@@ -92,3 +92,6 @@ other = "Omlouváme se, ale momentálně není možné vytvářet rezervace."
 
 [contactUs]
 other = "Spojte se s námi pomocí informací uvedené na stránce kontakt."
+
+[endOfReservation]
+other = "Rezervace vstupenek končí "

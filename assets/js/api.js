@@ -80,5 +80,13 @@ var API = {
                 '/time/active'
             )
         },
-    }
+    },
+
+    year: {
+        active: function(){
+            return getData(
+                '/year/active'
+            )
+        }
+    },
 }

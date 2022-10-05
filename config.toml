@@ -30,3 +30,5 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
         url = "mailto:pohles@rudickamladez.cz"
 [params.seo]
     image = "/images/hero-bg.webp"
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
