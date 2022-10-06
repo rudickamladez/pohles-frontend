@@ -26,4 +26,4 @@ Ne, stačí udělat rezervaci jen dítěti.
 Ano, náš Pohádkový les vede po zpevněné cestě dlouhé cca 5 kilometrů.
 
 # Nepřišel mi žádný e-mail.
-Pokud Vám od nás nedorazil jakýkoliv e-mail, ať už potvrzovací nebo informační, prohledejte nejpve složku **SPAM**. Když ani to nepomůže, napište nám [e-mail](mailto:pohles@rudickamladez.cz) a my Vám tento e-mail rádi znovu přepošleme.
+Pokud Vám od nás nedorazil jakýkoliv e-mail, ať už potvrzovací nebo informační, prohledejte nejprve složku **SPAM**. Když ani to nepomůže, napište nám [e-mail](mailto:pohles@rudickamladez.cz) a my Vám tento e-mail rádi znovu přepošleme.
