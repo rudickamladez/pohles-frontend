@@ -1,5 +1,5 @@
 ---
-title: Nejčastější dotazy
+title: Často kladené dotazy
 description: a odpovědi na ně
 # layout: faq
 menu:
