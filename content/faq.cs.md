@@ -26,7 +26,7 @@ Ne, stačí udělat rezervaci jen dítěti.
 Ano, náš Pohádkový les vede po zpevněné cestě dlouhé cca 5 kilometrů.
 
 # Koná se akce za každého počasí?
-Postavičky z našeho Pohádkového lesa se deště a jiných přírodních katastrof nebojí, takže akce se koná i za nepříznivého počasí.
+Postavičky z našeho Pohádkového lesa se deště a jiných přírodních rozmarů nebojí, takže akce se koná i za nepříznivého počasí.
 
 # Nepřišel mi e-mail.
 Pokud Vám od nás nedorazil jakýkoliv e-mail, ať už potvrzovací nebo informační, prohledejte nejprve složku **SPAM**. Když ani to nepomůže, napište nám [e-mail](mailto:pohles@rudickamladez.cz) a my Vám tento e-mail rádi znovu přepošleme.
