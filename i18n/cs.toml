@@ -95,3 +95,6 @@ other = "Spojte se s námi pomocí informací uvedené na stránce kontakt."
 
 [endOfReservation]
 other = "Rezervace vstupenek končí "
+
+[reservationsClosed]
+other = "Rezervace vstupenek jsou již uzavřeny."

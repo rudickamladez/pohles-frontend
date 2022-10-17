@@ -97,3 +97,6 @@ other = "Contact us on the contact page."
 
 [endOfReservation]
 other = "Reservations end on "
+
+[reservationsClosed]
+other = "We're sorry, reservations are closed."

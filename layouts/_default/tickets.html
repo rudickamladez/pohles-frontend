@@ -10,12 +10,13 @@
         {{ i18n "serverOutOfService" }}
         {{ i18n "contactUs" }}
       </div>
+      <div id="reservationsClosed" class="hidden">
+        <p>{{ i18n "reservationsClosed" }}</p>
+      </div>
       <div id="content">
         {{ .Content }}
         <span id="end-of-reservations-text" class="hidden">{{ i18n "endOfReservation" }}</span>
-      </div>
-      <div class="form">
-        <form action="#" method="post" role="form" id="new-ticket-form">
+        <form action="#" method="post" role="form" id="new-ticket-form" class="form">
           <div class="row">
             <div class="form-group col-md-6 mt-2 mt-md-3">
               <input type="text" name="name" class="form-control" id="firstname" placeholder={{ i18n "firstnameOfChild" }}
@@ -71,16 +72,21 @@
   function writeEndOfReservationSentence() {
     const endOfReservationDOM = document.getElementById("end-of-reservations");
     const endOfReservationTextDOM = document.getElementById("end-of-reservations-text");
+    const reservationsClosedDOM = document.getElementById("reservationsClosed");
+    const contentDOM = document.getElementById("content");
     API.year.active()
       .then((year) => {
         if (!year) {
           // Just don't change the text with info about reservation end.
           return;
         }
-        let timeFormatted = new Date(year.endOfReservations).toLocaleString();;
+        const d = new Date(year.endOfReservations);
+        if (d < new Date()) {
+          reservationsClosedDOM.classList = "";
+          contentDOM.classList = "hidden";
+        }
+        let timeFormatted = d.toLocaleString();;
         if (window.location.pathname.includes("cs")) {
-          const d = new Date(year.endOfReservations);
-          console.log(d);
           timeFormatted = `${d.getDate()}. ${(d.getMonth() + 1)}. ${d.getFullYear()} v ${d.getHours()}:${d.getMinutes() == 0 ? "00" : d.getMinutes()}`;
         }
         endOfReservationDOM.innerText = `${endOfReservationTextDOM.innerText} ${timeFormatted}.`;
@@ -107,7 +113,6 @@
       .then((times) => {
         // console.log(times);
         const select = document.getElementById("time");
-        console.log(select.innerHTML);
         select.innerHTML = "";
         select.appendChild(defaultTimeOptionDOM);
         for (var i = 0; i < times.length; i++) {
