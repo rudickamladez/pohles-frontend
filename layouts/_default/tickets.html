@@ -81,15 +81,23 @@
           return;
         }
         const d = new Date(year.endOfReservations);
-        if (d < new Date()) {
-          reservationsClosedDOM.classList = "";
-          contentDOM.classList = "hidden";
-        }
-        let timeFormatted = d.toLocaleString();;
+        
+        // Prepare formatted date in EN and CS
+        let timeFormatted = d.toLocaleString();
         if (window.location.pathname.includes("cs")) {
           timeFormatted = `${d.getDate()}. ${(d.getMonth() + 1)}. ${d.getFullYear()} v ${d.getHours()}:${d.getMinutes() == 0 ? "00" : d.getMinutes()}`;
         }
+
+        // Add formatted date to text about end of reservation
         endOfReservationDOM.innerText = `${endOfReservationTextDOM.innerText} ${timeFormatted}.`;
+        
+        // Closed reservations
+        if (d < new Date()) {
+          reservationsClosedDOM.classList = "";
+          contentDOM.classList = "hidden";
+          // Add formatted date to text about closed of reservation
+          reservationsClosedDOM.innerText = `${reservationsClosedDOM.innerText} ${timeFormatted}.`;
+        }
       })
       .catch((err) => {
         console.error(err);

@@ -99,4 +99,4 @@ other = "Contact us on the contact page."
 other = "Reservations end on "
 
 [reservationsClosed]
-other = "We're sorry, reservations are closed."
+other = "We're sorry, reservations has been closed on"
