@@ -1,6 +1,6 @@
 ---
 title: Rezervace
-description: Jednoduše a pohodlně
+description: Jednoduše a pohodlně
 layout: tickets
 ---
 
