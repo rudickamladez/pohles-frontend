@@ -1,6 +1,6 @@
 ---
 title: Kontakt
-description: Pojďte se seznámit, nikdo z nás nekouše.
+description: Pojďte se seznámit
 # layout: contact
 menu:
   main:
@@ -8,4 +8,4 @@ menu:
     weight: 3
 ---
 
-Kontaktovat nás můžete [e-mailem](mailto:pohles@rudickamladez.cz).
+Pokud Vás něco trápí, či potěšilo, sdělte nám to [e-mailem](mailto:pohles@rudickamladez.cz), nebo nám vyplňte formulář se [zpětnou vazbou](/feedback).

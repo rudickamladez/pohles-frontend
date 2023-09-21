@@ -13,6 +13,11 @@
 	to = "/cs/404/"
 	status = 404
 
+[[redirects]]
+	from = "/feedback"
+	to = "https://forms.gle/4scnUt2smMon7b6H8"
+	status = 301
+
 [build]
 publish = "public"
 command = "hugo --gc --minify"
