@@ -37,7 +37,7 @@ venue:
     description: 'Our fairytale forest begins in the area of the Sad pod Lipou areal, where it also ends. An unwritten tradition is that the children at the finish will get a snack, which they will later roast on the fire. '
   parking:
     heading: Parking
-    description: Visitors arriving by car are kindly requested to use the car park. <a href="https://goo.gl/maps/EPPPv2R1ow9DStVRA">Google Maps</a>
+    description: Visitors arriving by car are kindly requested to use the car park. <a href="https://goo.gl/maps/EPPPv2R1ow9DStVRA">Google Maps</a> Parking is <strong>free</strong>.
 menu:
   main:
     name: About
@@ -46,5 +46,5 @@ menu:
 
 The Fairytale forest in Rudice has a long tradition for more than 20 years.
 The length of the route is about 4,5km.
-The road is not paved but every year used by many strollers without any problems. 
+The road is not paved but every year used by many strollers without any problems.
 You can see more about this event on following [videos](https://youtube.com/playlist?list=PLfohfqLRYMDHG0lSzaMx9FADPa7Cm1HOc).

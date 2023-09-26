@@ -37,7 +37,7 @@ venue:
     description: 'Náš pohádkový les začíná v areálu Sadu pod Lipou, kde zároveň i končí. Nepsanou tradicí je, že děti v cíli dostanou buřt, který si na ohni později opékají.'
   parking:
     heading: Parkování
-    description: Návštěvníky přijíždějící autem prosíme, aby využili <a target="_blank" href="https://goo.gl/maps/EPPPv2R1ow9DStVRA">parkoviště u kaple sv. Barbory</a>, případně <a target="_blank" href="https://goo.gl/maps/XxFRtueFHpp3LNHX7">parkoviště u lomu Seč</a>.
+    description: Návštěvníky přijíždějící autem prosíme, aby využili <a target="_blank" href="https://goo.gl/maps/EPPPv2R1ow9DStVRA">parkoviště u kaple sv. Barbory</a>, případně <a target="_blank" href="https://goo.gl/maps/XxFRtueFHpp3LNHX7">parkoviště u lomu Seč</a>, <strong>parkovat</strong> zde mohou <strong>zdarma</strong>.
 menu:
   main:
     name: O události
