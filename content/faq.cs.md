@@ -10,7 +10,7 @@ images:
   - /img/about-bg.webp
 ---
 
-## Jak se k nám dostat?
+## Jak se k nám dostat?
 
 Do obce Rudice jezdí autobusy linky 231, máme i zástavku *Rudice, rozcestí 2.0*, kde zastavuje i linka 167. Více informací na [obecních stránkách](https://www.rudice.cz/informace/dopravni-informace).
 
@@ -18,7 +18,7 @@ Do obce Rudice jezdí autobusy linky 231, máme i zástavku *Rudice, rozcestí
 
 Návštěvníky přijíždějící autem prosíme, aby využili [Parkoviště pro Větrný mlýn a Rudické propadání](https://goo.gl/maps/EPPPv2R1ow9DStVRA), také můžete využít [Rudické parkoviště nejen pro autobusy](https://goo.gl/maps/CzQHWSFEY9ATb72Y7) a po cestě z něj prozkoumat krásné [okolí obce Rudice](https://www.rudice.cz/pro-turisty/rudice-a-okoli).
 
-## Jak je to se vstupným?
+## Jak je to se vstupným a rezervacemi?
 
 Vstupenku si do našeho Pohádkového lesa kupují jen děti, pro dospělé máme vstupné dobrovolné. Vstupenku pro děti lze rezervovat na těchto stránkách, ale nelze ji koupit, kupuje se až na místě a to pouze v hotovosti.
 
