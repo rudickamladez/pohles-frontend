@@ -22,6 +22,10 @@ Návštěvníky přijíždějící autem prosíme, aby využili [Parkoviště pr
 
 Vstupenku si do našeho Pohádkového lesa kupují jen děti, pro dospělé máme vstupné dobrovolné. Vstupenku pro děti lze rezervovat na těchto stránkách, ale nelze ji koupit, kupuje se až na místě a to pouze v hotovosti.
 
+## Co vše dostanu za vstupné?
+
+Děti dostanou **papír**, na který dostávají razítka v našem pohádkovém lese a na konci lesa za něj dostanou **buřt** s chlebem, dále je v ceně hrníček **čaje** a památeční **placka**.
+
 ## Je nutná rezervace i pro dospělé?
 
 Ne, stačí udělat rezervaci jen dítěti.
