@@ -8,4 +8,4 @@ menu:
     weight: 3
 ---
 
-You can contact us on [e-mail](mailto:pohles@rudickamladez.cz).
+You can contact us on [e-mail](mailto:pohles@rudickamladez.cz) or you can also submit our [feedback form](/feedback).
