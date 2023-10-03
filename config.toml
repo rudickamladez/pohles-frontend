@@ -3,6 +3,7 @@ defaultContentLanguage = "cs"
 defaultContentLanguageInSubdir = true
 title = "Pohádkový les Rudice"
 disableKinds = ["taxonomy", "taxonomyTerm"]
+googleAnalytics = "UA-144639332-2"
 [languages]
   [languages.cs]
     weight = 1
@@ -16,7 +17,6 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     siteURL = "https://pohles.rudickamladez.cz"
     lang = "cs"
     locale = "cs_CZ"
-    gatag = "UA-144639332-2"
     images = ["/images/hero-bg.webp"]
     [taxonomies]
         series = "series"
