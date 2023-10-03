@@ -3,7 +3,7 @@ defaultContentLanguage = "cs"
 defaultContentLanguageInSubdir = true
 title = "Pohádkový les Rudice"
 disableKinds = ["taxonomy", "taxonomyTerm"]
-googleAnalytics = "UA-144639332-2"
+googleAnalytics = "G-JD3DKEZWDF"
 [languages]
   [languages.cs]
     weight = 1
