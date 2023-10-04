@@ -20,7 +20,7 @@ Návštěvníky přijíždějící autem prosíme, aby využili [Parkoviště pr
 
 ## Jak je to se vstupným a rezervacemi?
 
-Vstupenku si do našeho Pohádkového lesa kupují jen děti, pro dospělé máme vstupné dobrovolné. Vstupenku pro děti lze rezervovat na těchto stránkách, ale nelze ji koupit, kupuje se až na místě a to pouze v hotovosti.
+Vstupenku si do našeho Pohádkového lesa kupují jen děti, pro dospělé máme vstupné dobrovolné. Vstupenku pro děti lze rezervovat na těchto stránkách, ale nelze ji koupit, kupuje se až na místě, a to pouze v hotovosti.
 
 ## Co vše dostanu za vstupné?
 
