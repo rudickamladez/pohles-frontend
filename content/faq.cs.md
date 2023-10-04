@@ -1,7 +1,6 @@
 ---
 title: Často kladené dotazy
 description: a odpovědi na ně
-# layout: faq
 menu:
   main:
     name: FAQ
