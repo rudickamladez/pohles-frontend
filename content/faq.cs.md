@@ -1,7 +1,6 @@
 ---
 title: Často kladené dotazy
 description: a odpovědi na ně
-# layout: faq
 menu:
   main:
     name: FAQ
@@ -16,15 +15,15 @@ Do obce Rudice jezdí autobusy linky 231, máme i zástavku *Rudice, rozcestí
 
 ## Kde mohu zaparkovat?
 
-Návštěvníky přijíždějící autem prosíme, aby využili [Parkoviště pro Větrný mlýn a Rudické propadání](https://goo.gl/maps/EPPPv2R1ow9DStVRA), také můžete využít [Rudické parkoviště nejen pro autobusy](https://goo.gl/maps/CzQHWSFEY9ATb72Y7) a po cestě z něj prozkoumat krásné [okolí obce Rudice](https://www.rudice.cz/pro-turisty/rudice-a-okoli).
+Návštěvníky přijíždějící autem prosíme, aby využili [parkoviště pro větrný mlýn a rudické propadání](https://goo.gl/maps/EPPPv2R1ow9DStVRA), také můžete využít [rudické parkoviště nejen pro autobusy](https://goo.gl/maps/CzQHWSFEY9ATb72Y7) a po cestě z něj prozkoumat krásné [okolí obce Rudice](https://www.rudice.cz/pro-turisty/rudice-a-okoli).
 
 ## Jak je to se vstupným a rezervacemi?
 
-Vstupenku si do našeho Pohádkového lesa kupují jen děti, pro dospělé máme vstupné dobrovolné. Vstupenku pro děti lze rezervovat na těchto stránkách, ale nelze ji koupit, kupuje se až na místě a to pouze v hotovosti.
+Vstupenku si do našeho Pohádkového lesa kupují jen děti, pro dospělé máme vstupné dobrovolné. Vstupenku pro děti lze rezervovat na těchto stránkách, ale nelze ji koupit, kupuje se až na místě, a to pouze v hotovosti.
 
 ## Co vše dostanu za vstupné?
 
-Děti dostanou **papír**, na který dostávají razítka v našem pohádkovém lese a na konci lesa za něj dostanou **buřt** s chlebem, dále je v ceně hrníček **čaje** a památeční **placka**.
+Děti dostanou **papír**, na který dostávají razítka v našem Pohádkovém lese, a na konci lesa za něj dostanou **buřt** s chlebem, dále je v ceně hrníček **čaje** a památeční **placka**.
 
 ## Je nutná rezervace i pro dospělé?
 
