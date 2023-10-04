@@ -24,7 +24,7 @@ Vstupenku si do našeho Pohádkového lesa kupují jen děti, pro dospělé mám
 
 ## Co vše dostanu za vstupné?
 
-Děti dostanou **papír**, na který dostávají razítka v našem Pohádkovém lese a na konci lesa za něj dostanou **buřt** s chlebem, dále je v ceně hrníček **čaje** a památeční **placka**.
+Děti dostanou **papír**, na který dostávají razítka v našem Pohádkovém lese, a na konci lesa za něj dostanou **buřt** s chlebem, dále je v ceně hrníček **čaje** a památeční **placka**.
 
 ## Je nutná rezervace i pro dospělé?
 
