@@ -64,10 +64,10 @@ var API = {
                 '/ticket/easy',
                 {
                     name: {
-                        first: firstname,
-                        last: lastname,
+                        first: firstname.trim(),
+                        last: lastname.trim(),
                     },
-                    email: email,
+                    email: email.trim(),
                     time: time,
                 }
             )
