@@ -2,35 +2,35 @@
 title: O události
 description: Akce nejen pro děti
 layout: about
-images:
-  - /img/20171021151607_IMG_1056.webp
-  - /img/20171021153430_IMG_1095.webp
-  - /img/DSCF9117.webp
-  - /img/DSCF8230.webp
-  - /img/DSCF8227.webp
-  - /img/DSCF8242.webp
-  - /img/20171021154943_IMG_1146.webp
-  - /img/DSCF8256.webp
-  - /img/20171021172445_IMG_1503.webp
-  - /img/20171021164827_IMG_1426.webp
-  - /img/20171021160423_IMG_1200.webp
-  - /img/DSC_0730.webp
-  - /img/DSC_0856.webp
-  - /img/DSC_0859.webp
-  - /img/DSC_0893.webp
-  - /img/IMG_0039.webp
-  - /img/IMG_5926.webp
-  - /img/DSCF9157.webp
-  - /img/DSC_0776.webp
-  - /img/DSC_0778.webp
-  - /img/DSCF8170.webp
-  - /img/DSCF8207.webp
-  - /img/DSCF8212.webp
-  - /img/DSCF8196.webp
-  - /img/DSCF9228.webp
-  - /img/DSCF9197.webp
-  - /img/patrik-hribek-2009.webp
-  - /img/20171021194056_IMG_1524.webp
+gallery:
+  - images/20171021151607_IMG_1056.webp
+  - images/20171021153430_IMG_1095.webp
+  - images/DSCF9117.webp
+  - images/DSCF8230.webp
+  - images/DSCF8227.webp
+  - images/DSCF8242.webp
+  - images/20171021154943_IMG_1146.webp
+  - images/DSCF8256.webp
+  - images/20171021172445_IMG_1503.webp
+  - images/20171021164827_IMG_1426.webp
+  - images/20171021160423_IMG_1200.webp
+  - images/DSC_0730.webp
+  - images/DSC_0856.webp
+  - images/DSC_0859.webp
+  - images/DSC_0893.webp
+  - images/IMG_0039.webp
+  - images/IMG_5926.webp
+  - images/DSCF9157.webp
+  - images/DSC_0776.webp
+  - images/DSC_0778.webp
+  - images/DSCF8170.webp
+  - images/DSCF8207.webp
+  - images/DSCF8212.webp
+  - images/DSCF8196.webp
+  - images/DSCF9228.webp
+  - images/DSCF9197.webp
+  - images/patrik-hribek-2009.webp
+  - images/20171021194056_IMG_1524.webp
 venue:
   info:
     heading: Sad pod Lipou
