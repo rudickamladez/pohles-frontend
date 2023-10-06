@@ -98,22 +98,24 @@
               const errorTextInJSON = JSON.parse(errorText);
               let message = "";
               console.log(errorTextInJSON);
-              switch (errorTextInJSON.message) {
-                case 'Did not send id':
-                  message = "Špatné ID rezervace.";
-                  break;
-                case 'Did not send email':
-                  message = "Byl zadán špatný email.";
-                  break;
-                case "Ticket not found in database":
-                  message = "Rezervace s tímto ID neexistuje.";
-                  break;
-                case "Ticket already cancelled.":
-                  message = "Rezervace již byla zrušena.";
-                  break;
-                case "User send bad email.":
-                  message = "Zadal/a jste špatný email."
-                  break;
+              if (window.location.href.includes('cs')) {
+                switch (errorTextInJSON.message) {
+                  case 'Did not send id':
+                    message = "Špatné ID rezervace.";
+                    break;
+                  case 'Did not send email':
+                    message = "Byl zadán špatný email.";
+                    break;
+                  case "Ticket not found in database":
+                    message = "Rezervace s tímto ID neexistuje.";
+                    break;
+                  case "Ticket already cancelled.":
+                    message = "Rezervace již byla zrušena.";
+                    break;
+                  case "User send bad email.":
+                    message = "Zadal/a jste špatný email."
+                    break;
+                }
               }
               errorMessageDOM.innerHTML += `<br/>${message}`;
               errorMessageDOM.style = "display: initial;";
