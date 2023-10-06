@@ -72,6 +72,20 @@ var API = {
                 }
             )
         },
+
+
+        cancel: function (
+            id,
+            email
+        ) {
+            return postData(
+                '/ticket/cancel',
+                {
+                    id,
+                    email: email.trim(),
+                }
+            )
+        },
     },
 
     time: {

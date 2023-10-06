@@ -10,6 +10,15 @@ other = "When"
 [tickets]
 other = "Tickets"
 
+[ticketId]
+other = "ID of reservation"
+
+[successTicketCancel]
+other = "Successfully cancelled."
+
+[cancel]
+other = "Cancel"
+
 [wordCount]
 other = "This article has {{ .WordCount }} words."
 
