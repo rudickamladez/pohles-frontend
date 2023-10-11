@@ -1,0 +1,161 @@
+{{ define "main" }}
+<main id="main" class="main-page">
+  <section id="tickets" class="section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Description }}</p>
+      </div>
+      <div id="serverOutOfService" style="display: none;">
+        {{ i18n "serverOutOfService" }}
+        {{ i18n "contactUs" }}
+      </div>
+      <div id="content">
+        {{ .Content }}
+        <form action="#" method="post" role="form" id="cancel-ticket-form" class="form">
+          <div class="row">
+            <div class="form-group col-md-12 mt-2 mt-md-3">
+              <input type="text" class="form-control" name="ticketid" id="ticketid" placeholder={{ i18n "ticketId" }}
+                required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-12 mt-2 mt-md-3">
+              <input type="email" class="form-control" name="email" id="email" placeholder={{ i18n "emailOfParent" }}
+                required>
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="loading" id="loading">{{ i18n "loading" }}</div>
+            <div class="error-message" id="error-message">{{ i18n "errorMessage" }}</div>
+            <div class="sent-message" id="sent-message">{{ i18n "successTicketCancel" }}</div>
+          </div>
+          <div class="text-center">
+            <button type="submit" id="submit-button">
+              {{ i18n "cancel" }}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  window.addEventListener("load", function () {
+    // Get params from URL path
+    const urlParams = new URLSearchParams(window.location.search);
+    const ticketIdFromParams = urlParams.get("id");
+    const emailFromParams = urlParams.get("email");
+
+    // DOM variables
+    const contentDOM = document.getElementById("content");
+    const serverOutOfServiceDOM = document.getElementById("serverOutOfService");
+    const formDOM = document.getElementById("cancel-ticket-form");
+    const loadingDOM = document.getElementById("loading");
+    const errorMessageDOM = document.getElementById("error-message");
+    const sentMessageDOM = document.getElementById("sent-message");
+    const submitButtonDOM = document.getElementById("submit-button");
+
+    // buyer DOM variables
+    const ticketIdDOM = document.getElementById("ticketid");
+    const emailDOM = document.getElementById("email");
+
+    if (ticketIdFromParams) {
+      // fill input field
+      ticketIdDOM.value = ticketIdFromParams;
+    }
+
+    if (emailFromParams) {
+      // fill input field
+      emailDOM.value = emailFromParams;
+    }
+
+    // If not email in URL take it from cookies
+    let buyer = Cookies.get("buyer");
+    if (buyer && emailDOM.value.trim() == "") {
+      buyer = JSON.parse(buyer);
+
+      // fill input field
+      emailDOM.value = buyer.email.trim();
+    }
+    
+
+    function sendData() {
+      loadingDOM.style = "display: initial;";
+
+      // POST API
+      API.ticket.cancel(
+        ticketIdDOM.value,
+        emailDOM.value
+      ).then(async (response) => {
+        console.log(response);
+        loadingDOM.style = "display: none;";
+        if (response.status != 200) {
+          const errorText = await response.text();
+          console.error(errorText);
+          if (response.status == 400) {
+            try {
+              const errorTextInJSON = JSON.parse(errorText);
+              let message = "";
+              console.log(errorTextInJSON);
+              if (window.location.href.includes('cs')) {
+                switch (errorTextInJSON.message) {
+                  case 'Did not send id':
+                    message = "Špatné ID rezervace.";
+                    break;
+                  case 'Did not send email':
+                    message = "Byl zadán špatný email.";
+                    break;
+                  case "Ticket not found in database":
+                    message = "Rezervace s tímto ID neexistuje.";
+                    break;
+                  case "Ticket already cancelled.":
+                    message = "Rezervace již byla zrušena.";
+                    break;
+                  case "User send bad email.":
+                    message = "Zadal/a jste špatný email."
+                    break;
+                }
+              }
+              errorMessageDOM.innerHTML += `<br/>${message}`;
+              errorMessageDOM.style = "display: initial;";
+              return;
+            }
+            catch (exception) {
+              console.error(exception);
+            }
+          }
+          errorMessageDOM.innerHTML += `<br/>${errorText}`;
+          errorMessageDOM.style = "display: initial;";
+        } else {
+          const res = await response.text();
+          // console.log(res);
+          Cookies.set(
+            "buyer",
+            JSON.stringify({
+              email: emailDOM.value
+            }));
+          ticketIdDOM.value = "";
+          sentMessageDOM.style = "display: initial;";
+          setTimeout(() => {
+            sentMessageDOM.style = "display: hide;";
+          }, 20000);
+        }
+      });
+    }
+
+    // Access the form element...
+    const form = document.getElementById("cancel-ticket-form");
+
+    // ...and take over its submit event.
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      submitButtonDOM.style = "display: none;";
+      errorMessageDOM.style = "display: none;";
+      sentMessageDOM.style = "display: none;";
+
+      sendData();
+    });
+  });
+</script>
+{{ end }}

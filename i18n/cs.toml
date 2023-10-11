@@ -10,6 +10,15 @@ other = "Kdy"
 [tickets]
 other = "Rezervace"
 
+[ticketId]
+other = "ID rezervace"
+
+[successTicketCancel]
+other = "Úspěšně jste zrušil/a rezervaci vstupenky."
+
+[cancel]
+other = "Zrušit"
+
 [yourName]
 other = "Vaše jméno"
 
@@ -88,7 +97,7 @@ one = "volné místo"
 other = "volných míst"
 
 [serverOutOfService]
-other = "Omlouváme se, ale momentálně není možné vytvářet rezervace."
+other = "Omlouváme se, ale něco se pokazilo."
 
 [contactUs]
 other = "Spojte se s námi pomocí informací uvedené na stránce kontakt."
