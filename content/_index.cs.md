@@ -14,7 +14,7 @@ hero:
   subheading: 'Skočte si s námi z pohádky do pohádky'
 about:
   where: 'Sad pod Lipou v Rudici'
-  when: '21. 10. 2023 od 14:00'
+  when: '19. 10. 2024 od 14:00'
 menu:
   main:
     name: Domů

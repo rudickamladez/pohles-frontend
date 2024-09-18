@@ -6,7 +6,7 @@ hero:
   subheading: 'Jump with us from fairy tale to fairy tale'
 about:
   where: 'Sad pod Lipou areal in Rudice'
-  when: '21. 10. 2023 at 02:00 PM'
+  when: '19. 10. 2024 at 02:00 PM'
 menu:
   main:
     name: Home
