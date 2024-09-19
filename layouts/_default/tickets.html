@@ -80,7 +80,7 @@
           // Just don't change the text with info about reservation end.
           return;
         }
-        const d = new Date(year.endOfReservations);
+        const d = new Date(year.tickets_sales_end);
         
         // Prepare formatted date in EN and CS
         let timeFormatted = d.toLocaleString();
@@ -117,14 +117,14 @@
     defaultTimeOptionDOM.selected = true;
     defaultTimeOptionDOM.disabled = true;
     defaultTimeOptionDOM.value = "default";
-    API.time.active()
-      .then((times) => {
-        // console.log(times);
+    API.year.active()
+      .then((event) => {
+        console.log(event);
         const select = document.getElementById("time");
         select.innerHTML = "";
         select.appendChild(defaultTimeOptionDOM);
-        for (var i = 0; i < times.length; i++) {
-          var opt = times[i];
+        for (var i = 0; i < event.ticket_groups.length; i++) {
+          var opt = event.ticket_groups[i];
           var el = document.createElement("option");
           if (opt.freePositions <= 0) {
             el.textContent = `${opt.name} - 0 ${document.getElementById("freePositions").innerText}`;

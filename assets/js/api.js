@@ -52,7 +52,7 @@ function myCopyToClipboard(text) {
 }
 
 var API = {
-    endpoint: "https://api.pohles.rudickamladez.cz",
+    endpoint: "https://api.cutetix.com",
     ticket: {
         easy: function (
             firstname,
@@ -68,7 +68,7 @@ var API = {
                         last: lastname.trim(),
                     },
                     email: email.trim(),
-                    time: time,
+                    group_id: time,
                 }
             )
         },
@@ -99,7 +99,7 @@ var API = {
     year: {
         active: function(){
             return getData(
-                '/year/active'
+                '/events/1'
             )
         }
     },
