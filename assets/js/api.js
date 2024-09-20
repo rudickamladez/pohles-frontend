@@ -61,12 +61,10 @@ var API = {
             time
         ) {
             return postData(
-                '/ticket/easy',
+                '/tickets/easy',
                 {
-                    name: {
-                        first: firstname.trim(),
-                        last: lastname.trim(),
-                    },
+                    firstname: firstname.trim(),
+                    lastname: lastname.trim(),
                     email: email.trim(),
                     group_id: time,
                 }
@@ -79,19 +77,11 @@ var API = {
             email
         ) {
             return postData(
-                '/ticket/cancel',
+                '/tickets/cancel',
                 {
                     id,
                     email: email.trim(),
                 }
-            )
-        },
-    },
-
-    time: {
-        active: function () {
-            return getData(
-                '/time/active'
             )
         },
     },
