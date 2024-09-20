@@ -135,7 +135,7 @@
             el.value = opt._id;
           } else {
             el.textContent = `${opt.name} - ${document.getElementById("freePositions").innerText}: ${opt.freePositions}`;
-            el.value = opt._id;
+            el.value = opt.id;
           }
           select.appendChild(el);
         }
