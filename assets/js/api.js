@@ -86,6 +86,14 @@ var API = {
         },
     },
 
+    times: {
+        active: function(){
+            return getData(
+                '/ticket_groups/by-event/1'
+            )
+        }
+    },
+
     year: {
         active: function(){
             return getData(

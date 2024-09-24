@@ -117,24 +117,24 @@
     defaultTimeOptionDOM.selected = true;
     defaultTimeOptionDOM.disabled = true;
     defaultTimeOptionDOM.value = "default";
-    API.year.active()
-      .then((event) => {
-        console.log(event);
+    API.times.active()
+      .then((times) => {
+        console.log(times);
         const select = document.getElementById("time");
         select.innerHTML = "";
         select.appendChild(defaultTimeOptionDOM);
-        for (var i = 0; i < event.ticket_groups.length; i++) {
-          var opt = event.ticket_groups[i];
+        for (var i = 0; i < times.length; i++) {
+          var opt = times[i];
           var el = document.createElement("option");
-          if (opt.freePositions <= 0) {
+          if (opt.free_positions <= 0) {
             el.textContent = `${opt.name} - 0 ${document.getElementById("freePositions").innerText}`;
             el.disabled = "disabled";
             el.value = "null";
-          } else if (opt.freePositions == 1) {
-            el.textContent = `${opt.name} - ${document.getElementById("freePosition").innerText}: ${opt.freePositions}`;
+          } else if (opt.free_positions == 1) {
+            el.textContent = `${opt.name} - ${document.getElementById("freePosition").innerText}: ${opt.free_positions}`;
             el.value = opt._id;
           } else {
-            el.textContent = `${opt.name} - ${document.getElementById("freePositions").innerText}: ${opt.freePositions}`;
+            el.textContent = `${opt.name} - ${document.getElementById("freePositions").innerText}: ${opt.free_positions}`;
             el.value = opt.id;
           }
           select.appendChild(el);
