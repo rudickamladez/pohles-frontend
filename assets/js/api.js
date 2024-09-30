@@ -51,6 +51,19 @@ function myCopyToClipboard(text) {
         });
 }
 
+function timeFormatted(d, inCzech=true) {
+    // Prepare formatted date in EN and CS
+    res = d.toLocaleString();
+    if (inCzech) {
+        minutes = d.getMinutes()
+        if (minutes < 10) {
+            minutes = `0${minutes}`
+        }
+        res = `${d.getDate()}. ${(d.getMonth() + 1)}. ${d.getFullYear()} v ${d.getHours()}:${minutes}`;
+    }
+    return res
+}
+
 var API = {
     endpoint: "https://api.cutetix.com",
     ticket: {

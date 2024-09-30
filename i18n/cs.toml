@@ -107,3 +107,6 @@ other = "Rezervace vstupenek končí "
 
 [reservationsClosed]
 other = "Rezervace vstupenek byly uzavřeny"
+
+[reservationsNotOpenedYet]
+other = "Děkujeme za Vaši přízeň, ale brány našeho rezervačního systému jsou ještě zavřené. Otevřeme je"
