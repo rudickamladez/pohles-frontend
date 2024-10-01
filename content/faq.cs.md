@@ -19,7 +19,10 @@ Návštěvníky přijíždějící autem prosíme, aby využili [parkoviště pr
 
 ## Jak je to se vstupným a rezervacemi?
 
-Vstupenku si do našeho Pohádkového lesa kupují jen děti, pro dospělé máme vstupné dobrovolné. Vstupenku pro děti lze rezervovat na těchto stránkách, ale nelze ji koupit, kupuje se až na místě, a to pouze v hotovosti.
+Vstupenku si do našeho Pohádkového lesa kupují jen děti, pro dospělé máme vstupné dobrovolné.
+Vstupenku pro děti lze rezervovat na těchto stránkách, ale nelze ji koupit, kupuje se až na místě, a to pouze v hotovosti.
+Každý rok, co máme on-line rezervace, myslíme i na technicky méně zdatné zájmce.
+Proto v každé skupince máme pár vstupenek, které se dají koupit pouze off-line.
 
 ## Co vše dostanu za vstupné?
 
@@ -32,6 +35,12 @@ Ne, stačí udělat rezervaci jen dítěti.
 ## Je cesta vhodná pro kočárek a malé děti?
 
 Ano, náš Pohádkový les vede po zpevněné cestě dlouhé cca 5 kilometrů.
+
+## Můžeme vzít do pohádkového lesa psa?
+
+Samozřejmě, že můžete!
+Pejsek bude určitě nadšený a pohádkový les si společně užijete.
+Jen prosíme, aby měl pejsek nasazený náhubek a vodítko, aby se všichni návštěvníci cítili bezpečně.
 
 ## Koná se akce za každého počasí?
 
