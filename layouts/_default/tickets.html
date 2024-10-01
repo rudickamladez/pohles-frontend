@@ -10,11 +10,16 @@
         {{ i18n "serverOutOfService" }}
         {{ i18n "contactUs" }}
       </div>
+      <div id="reservationsNotOpenedYet" class="hidden">
+        {{ i18n "reservationsNotOpenedYet" }}
+      </div>
       <div id="reservationsClosed" class="hidden">
         <p>{{ i18n "reservationsClosed" }}</p>
       </div>
       <div id="content">
         {{ .Content }}
+        <span id="end-of-reservations"></span>
+        <span id="ended-reservations-text" class="hidden">{{ i18n "endedReservation" }}</span>
         <span id="end-of-reservations-text" class="hidden">{{ i18n "endOfReservation" }}</span>
         <form action="#" method="post" role="form" id="new-ticket-form" class="form">
           <div class="row">
@@ -72,6 +77,7 @@
   function writeEndOfReservationSentence() {
     const endOfReservationDOM = document.getElementById("end-of-reservations");
     const endOfReservationTextDOM = document.getElementById("end-of-reservations-text");
+    const reservationsNotOpenedYetDOM = document.getElementById("reservationsNotOpenedYet");
     const reservationsClosedDOM = document.getElementById("reservationsClosed");
     const contentDOM = document.getElementById("content");
     API.year.active()
@@ -80,23 +86,28 @@
           // Just don't change the text with info about reservation end.
           return;
         }
-        const d = new Date(year.endOfReservations);
-        
-        // Prepare formatted date in EN and CS
-        let timeFormatted = d.toLocaleString();
-        if (window.location.pathname.includes("cs")) {
-          timeFormatted = `${d.getDate()}. ${(d.getMonth() + 1)}. ${d.getFullYear()} v ${d.getHours()}:${d.getMinutes() == 0 ? "00" : d.getMinutes()}`;
-        }
+        const dStart = new Date(year.tickets_sales_start);
+        const dEnd = new Date(year.tickets_sales_end);
+        const dNow = new Date();
+        const formatToCzech = window.location.pathname.includes("cs");
 
         // Add formatted date to text about end of reservation
         endOfReservationDOM.innerText = `${endOfReservationTextDOM.innerText} ${timeFormatted}.`;
         
+        // Not yet opened reservations
+        if (dStart > new Date()) {
+          reservationsNotOpenedYetDOM.classList = "";
+          contentDOM.classList = "hidden";
+          // Add formatted date to text about note yet opened reservations
+          reservationsNotOpenedYetDOM.innerText = `${reservationsNotOpenedYetDOM.innerText} ${timeFormatted(dStart, formatToCzech)}.`;
+        }
+
         // Closed reservations
-        if (d < new Date()) {
+        if (dEnd < new Date()) {
           reservationsClosedDOM.classList = "";
           contentDOM.classList = "hidden";
           // Add formatted date to text about closed of reservation
-          reservationsClosedDOM.innerText = `${reservationsClosedDOM.innerText} ${timeFormatted}.`;
+          reservationsClosedDOM.innerText = `${reservationsClosedDOM.innerText} ${timeFormatted(dEnd, formatToCzech)}.`;
         }
       })
       .catch((err) => {
@@ -117,25 +128,24 @@
     defaultTimeOptionDOM.selected = true;
     defaultTimeOptionDOM.disabled = true;
     defaultTimeOptionDOM.value = "default";
-    API.time.active()
+    API.times.active()
       .then((times) => {
-        // console.log(times);
         const select = document.getElementById("time");
         select.innerHTML = "";
         select.appendChild(defaultTimeOptionDOM);
         for (var i = 0; i < times.length; i++) {
           var opt = times[i];
           var el = document.createElement("option");
-          if (opt.freePositions <= 0) {
+          if (opt.free_positions <= 0) {
             el.textContent = `${opt.name} - 0 ${document.getElementById("freePositions").innerText}`;
             el.disabled = "disabled";
             el.value = "null";
-          } else if (opt.freePositions == 1) {
-            el.textContent = `${opt.name} - ${document.getElementById("freePosition").innerText}: ${opt.freePositions}`;
+          } else if (opt.free_positions == 1) {
+            el.textContent = `${opt.name} - ${document.getElementById("freePosition").innerText}: ${opt.free_positions}`;
             el.value = opt._id;
           } else {
-            el.textContent = `${opt.name} - ${document.getElementById("freePositions").innerText}: ${opt.freePositions}`;
-            el.value = opt._id;
+            el.textContent = `${opt.name} - ${document.getElementById("freePositions").innerText}: ${opt.free_positions}`;
+            el.value = opt.id;
           }
           select.appendChild(el);
         }

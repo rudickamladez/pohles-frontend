@@ -51,8 +51,21 @@ function myCopyToClipboard(text) {
         });
 }
 
+function timeFormatted(d, inCzech=true) {
+    // Prepare formatted date in EN and CS
+    res = d.toLocaleString();
+    if (inCzech) {
+        minutes = d.getMinutes()
+        if (minutes < 10) {
+            minutes = `0${minutes}`
+        }
+        res = `${d.getDate()}. ${(d.getMonth() + 1)}. ${d.getFullYear()} v ${d.getHours()}:${minutes}`;
+    }
+    return res
+}
+
 var API = {
-    endpoint: "https://api.pohles.rudickamladez.cz",
+    endpoint: "https://api.cutetix.com",
     ticket: {
         easy: function (
             firstname,
@@ -61,14 +74,12 @@ var API = {
             time
         ) {
             return postData(
-                '/ticket/easy',
+                '/tickets/easy',
                 {
-                    name: {
-                        first: firstname.trim(),
-                        last: lastname.trim(),
-                    },
+                    firstname: firstname.trim(),
+                    lastname: lastname.trim(),
                     email: email.trim(),
-                    time: time,
+                    group_id: time,
                 }
             )
         },
@@ -79,7 +90,7 @@ var API = {
             email
         ) {
             return postData(
-                '/ticket/cancel',
+                '/tickets/cancel',
                 {
                     id,
                     email: email.trim(),
@@ -88,18 +99,18 @@ var API = {
         },
     },
 
-    time: {
-        active: function () {
+    times: {
+        active: function(){
             return getData(
-                '/time/active'
+                '/ticket_groups/by-event/1'
             )
-        },
+        }
     },
 
     year: {
         active: function(){
             return getData(
-                '/year/active'
+                '/events/1'
             )
         }
     },
