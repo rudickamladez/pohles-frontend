@@ -92,7 +92,7 @@
         const formatToCzech = window.location.pathname.includes("cs");
 
         // Add formatted date to text about end of reservation
-        endOfReservationDOM.innerText = `${endOfReservationTextDOM.innerText} ${timeFormatted}.`;
+        endOfReservationDOM.innerText = `${endOfReservationTextDOM.innerText} ${timeFormatted(dEnd, formatToCzech)}.`;
         
         // Not yet opened reservations
         if (dStart > new Date()) {
