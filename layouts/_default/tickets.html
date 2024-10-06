@@ -142,7 +142,7 @@
             el.value = "null";
           } else if (opt.free_positions == 1) {
             el.textContent = `${opt.name} - ${document.getElementById("freePosition").innerText}: ${opt.free_positions}`;
-            el.value = opt._id;
+            el.value = opt.id;
           } else {
             el.textContent = `${opt.name} - ${document.getElementById("freePositions").innerText}: ${opt.free_positions}`;
             el.value = opt.id;
