@@ -110,3 +110,18 @@ other = "Rezervace vstupenek byly uzavřeny"
 
 [reservationsNotOpenedYet]
 other = "Děkujeme za Vaši přízeň, ale brány našeho rezervačního systému jsou ještě zavřené. Otevřeme je"
+
+[paid]
+other = "Zaplaceno"
+
+[reserved]
+other = "Zarezervováno"
+
+[free]
+other = "Volno"
+
+[cancelled]
+other = "Zrušeno"
+
+[total]
+other = "Celkem"

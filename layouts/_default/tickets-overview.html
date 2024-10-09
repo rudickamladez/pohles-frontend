@@ -1,0 +1,105 @@
+{{ define "main" }}
+<main id="main" class="main-page">
+  <section id="tickets" class="section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Description }}</p>
+      </div>
+      <div id="serverOutOfService" style="display: none;">
+        {{ i18n "serverOutOfService" }}
+        {{ i18n "contactUs" }}
+      </div>
+      <div id="content">
+        {{ .Content }}
+        <div class="row my-3">
+          <div class="loading" id="loading">{{ i18n "loading" }}</div>
+          <div class="error-message" id="error-message">{{ i18n "errorMessage" }}</div>
+        </div>
+        <div class="row my-3 d-flex flex-row justify-content-center">
+          <div class="col d-none" id="paid-tickets">
+            <h3>{{ i18n "paid" }}</h3>
+            <p>0</p>
+          </div>
+          <div class="col-md-6 col-sm-12" id="free-tickets">
+            <h3>{{ i18n "free" }}</h3>
+            <p>0</p>
+          </div>
+          <div class="col-md-6 col-sm-12" id="reserved-tickets">
+            <h3>{{ i18n "reserved" }}</h3>
+            <p>0</p>
+          </div>
+          <div class="col-md-6 col-sm-12" id="cancelled-tickets">
+            <h3>{{ i18n "cancelled" }}</h3>
+            <p>0</p>
+          </div>
+          <div class="col-md-6 col-sm-12" id="total-tickets">
+            <h3>{{ i18n "total" }}</h3>
+            <p>0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  window.addEventListener("load", function () {
+    // DOM variables
+    const contentDOM = document.getElementById("content");
+    const serverOutOfServiceDOM = document.getElementById("serverOutOfService");
+    const loadingDOM = document.getElementById("loading");
+    const errorMessageDOM = document.getElementById("error-message");
+    
+
+    function loadAndWriteData() {
+      // GET data from API
+      API.year.capacity_summary().then(async (response) => {
+        console.log(response);
+        loadingDOM.style.display = "none";
+        if (response.status != 200) {
+          const errorText = await response.text();
+          console.error(errorText);
+          if (response.status == 400) {
+            try {
+              const errorTextInJSON = JSON.parse(errorText);
+              let message = "";
+              console.log(errorTextInJSON);
+              errorMessageDOM.innerHTML = errorTextInJSON.message;
+              serverOutOfServiceDOM.style = "display: initial;";
+              return;
+            }
+            catch (exception) {
+              console.error(exception);
+            }
+          }
+          errorMessageDOM.innerHTML += `<br/>${errorText}`;
+          serverOutOfServiceDOM.style = "display: initial;";
+        } else {
+          const res = await response.json();
+          console.log(res);
+          
+          for (const ticketStatus in res) {
+            const valueDOM = document.querySelector(`#${ticketStatus}-tickets p`);
+            if (valueDOM == null) {
+              console.error(`Not found "${ticketStatus}" value DOM, value: ${res[ticketStatus]}`)
+              continue;
+            }
+            valueDOM.innerHTML = res[ticketStatus];
+
+            // Add percentage values
+            if (ticketStatus != "total") {
+              const percentageDOM = document.createElement("div");
+              let percentage = res[ticketStatus] / res["total"] * 100;
+              percentage = Math.round(percentage * 100) / 100;
+              percentageDOM.innerText = `${percentage} %`;
+              valueDOM.appendChild(percentageDOM);
+            }
+          }
+        }
+      });
+    }
+
+    loadAndWriteData();
+  });
+</script>
+{{ end }}

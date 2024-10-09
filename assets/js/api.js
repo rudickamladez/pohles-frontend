@@ -17,7 +17,7 @@ async function postData(url = '', data = {}) {
     return response;
 }
 
-async function getData(path = '', data = {}) {
+async function getDataRequest(path = '', data = {}) {
     const url = new URL(API.endpoint + path)
     const keys = Object.keys(data)
     const values = Object.values(data)
@@ -39,7 +39,11 @@ async function getData(path = '', data = {}) {
         redirect: 'follow',
         referrerPolicy: 'no-referrer'
     })
-    return response.json()
+    return response
+}
+
+async function getData(path = '', data = {}) {
+    return getDataRequest(path, data).json()
 }
 
 function myCopyToClipboard(text) {
@@ -112,6 +116,12 @@ var API = {
             return getData(
                 '/events/1'
             )
-        }
+        },
+
+        capacity_summary: function(){
+            return getDataRequest(
+                '/events/capacity_summary/1'
+            )
+        },
     },
 }
