@@ -43,7 +43,8 @@ async function getDataRequest(path = '', data = {}) {
 }
 
 async function getData(path = '', data = {}) {
-    return getDataRequest(path, data).json()
+    const response = await getDataRequest(path, data);
+    return response.json()
 }
 
 function myCopyToClipboard(text) {
