@@ -137,14 +137,14 @@
           var opt = times[i];
           var el = document.createElement("option");
           if (opt.free_positions <= 0) {
-            el.textContent = `${opt.name} - 0 ${document.getElementById("freePositions").innerText}`;
+            el.textContent = `${opt.name} ‒ 0 ${document.getElementById("freePositions").innerText}`;
             el.disabled = "disabled";
             el.value = "null";
           } else if (opt.free_positions == 1) {
-            el.textContent = `${opt.name} - ${document.getElementById("freePosition").innerText}: ${opt.free_positions}`;
+            el.textContent = `${opt.name} ‒ ${document.getElementById("freePosition").innerText}: ${opt.free_positions}`;
             el.value = opt.id;
           } else {
-            el.textContent = `${opt.name} - ${document.getElementById("freePositions").innerText}: ${opt.free_positions}`;
+            el.textContent = `${opt.name} ‒ ${document.getElementById("freePositions").innerText}: ${opt.free_positions}`;
             el.value = opt.id;
           }
           select.appendChild(el);
