@@ -15,7 +15,8 @@ Do obce Rudice jezdí autobusy linky 231, máme i zástavku *Rudice, rozcestí
 
 ## Kde mohu zaparkovat?
 
-Návštěvníky přijíždějící autem prosíme, aby využili [parkoviště pro větrný mlýn a rudické propadání](https://goo.gl/maps/EPPPv2R1ow9DStVRA), také můžete využít [rudické parkoviště nejen pro autobusy](https://goo.gl/maps/CzQHWSFEY9ATb72Y7) a po cestě z něj prozkoumat krásné [okolí obce Rudice](https://www.rudice.cz/pro-turisty/rudice-a-okoli).
+Návštěvníky přijíždějící autem prosíme, aby využili [parkoviště pro větrný mlýn a rudické propadání](https://goo.gl/maps/EPPPv2R1ow9DStVRA), **parkovné se zde neplatí**.
+Také můžete využít [rudické parkoviště nejen pro autobusy](https://goo.gl/maps/CzQHWSFEY9ATb72Y7) a po cestě z něj prozkoumat krásné [okolí obce Rudice](https://www.rudice.cz/pro-turisty/rudice-a-okoli).
 
 ## Jak je to se vstupným a rezervacemi?
 
