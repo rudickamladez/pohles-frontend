@@ -113,6 +113,9 @@ other = "We're sorry, reservations has been closed on"
 [reservationsNotOpenedYet]
 other = "Reservations are not open yet. They will be opened on"
 
+[reservationsFull]
+other = "We're sorry, reservations has been closed on. System is full."
+
 [paid]
 other = "Paid"
 
