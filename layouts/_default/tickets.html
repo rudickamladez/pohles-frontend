@@ -134,6 +134,7 @@
     defaultTimeOptionDOM.value = "default";
     API.times.active()
       .then((times) => {
+        times.sort((a, b) => (a.name.toLowerCase() || "").localeCompare(b.name.toLowerCase() || ""));
         const select = document.getElementById("time");
         select.innerHTML = "";
         const allTimesFull = times.every(t => t.free_positions === 0);
