@@ -23,7 +23,7 @@ googleAnalytics = "G-JD3DKEZWDF"
     [[params.links]]
         icon = "github"
         title = "GitHub"
-        url = "https://github.com/HodyRC/pohles-frontend"
+        url = "https://github.com/rudickamladez/pohles-frontend"
     [[params.links]]
         icon = "envelope"
         title = "E-mail"
