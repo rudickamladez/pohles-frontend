@@ -56,7 +56,7 @@ function myCopyToClipboard(text) {
         });
 }
 
-function timeFormatted(d, inCzech=true) {
+function timeFormatted(d, inCzech = true) {
     // Prepare formatted date in EN and CS
     res = d.toLocaleString();
     if (inCzech) {
@@ -71,6 +71,7 @@ function timeFormatted(d, inCzech=true) {
 
 var API = {
     endpoint: "https://api.cutetix.com",
+    EVENT_ID: 3,
     ticket: {
         easy: function (
             firstname,
@@ -89,7 +90,6 @@ var API = {
             )
         },
 
-
         cancel: function (
             id,
             email
@@ -105,23 +105,23 @@ var API = {
     },
 
     times: {
-        active: function(){
+        active: function () {
             return getData(
-                '/ticket_groups/by-event/1'
+                `/ticket_groups/by-event/${API.EVENT_ID}`
             )
         }
     },
 
     year: {
-        active: function(){
+        active: function () {
             return getData(
-                '/events/1'
+                `/events/${API.EVENT_ID}`
             )
         },
 
-        capacity_summary: function(){
+        capacity_summary: function () {
             return getDataRequest(
-                '/events/capacity_summary/1'
+                `/events/capacity_summary/${API.EVENT_ID}`
             )
         },
     },
