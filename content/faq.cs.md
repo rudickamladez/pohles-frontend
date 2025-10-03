@@ -21,7 +21,7 @@ Také můžete využít [rudické parkoviště nejen pro autobusy](https://goo.g
 ## Jak je to se vstupným a rezervacemi?
 
 Vstupenku si do našeho Pohádkového lesa kupují jen děti, pro dospělé máme vstupné dobrovolné.
-Vstupenku pro děti lze rezervovat na těchto stránkách, ale nelze ji koupit, kupuje se až na místě, a to pouze v hotovosti.
+Vstupenku pro děti lze rezervovat na těchto stránkách, ale nelze ji koupit, kupuje se až na místě, platit můžete v hotovosti, nebo kartou.
 Každý rok, co máme on-line rezervace, myslíme i na technicky méně zdatné zájmce.
 Proto v každé skupince máme pár vstupenek, které se dají koupit pouze off-line.
 
