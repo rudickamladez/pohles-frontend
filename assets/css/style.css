@@ -1407,7 +1407,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sent-message {
-  display: none;
   color: #fff;
   background: #18d26e;
   text-align: center;
