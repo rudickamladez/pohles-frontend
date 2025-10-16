@@ -4,11 +4,6 @@
 	status = 301
 
 [[redirects]]
-	from = "/jidlo"
-	to = "https://forms.gle/sPJPr6sMaoLmeqHd8"
-	status = 301
-
-[[redirects]]
 	from = "/en/*"
 	to = "/en/404/"
 	status = 404
